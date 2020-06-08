@@ -1,0 +1,13 @@
+{
+	"success": false,
+	"apiName": "customer-billing-crm-eapi",
+	"version": "v1",
+	"idpTraceId": "f80c9750-0252-11ea-a538-f606160048e8",
+  "uuid"  :"23be1978-a451-11ea-bb37-0242ac130002",
+	"timestamp": "2020-05-21T13:09:57.714-05:00",
+	"errorDetails": {
+		"code": 500,
+		"message": "Internal Server Error. There were issues accessing the Billing API",
+		"additionalInfo": "Bad Connectivity : There were issues accessing the Billing API."
+	}
+}

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:kafka="http://www.mulesoft.org/schema/mule/kafka"
+	xmlns:api-gateway="http://www.mulesoft.org/schema/mule/api-gateway"
+	xmlns:apikit="http://www.mulesoft.org/schema/mule/mule-apikit"
+	xmlns:tls="http://www.mulesoft.org/schema/mule/tls"
+	xmlns:att-mule-applicationlogger="http://www.mulesoft.org/schema/mule/att-mule-applicationlogger"
+	xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns:secure-properties="http://www.mulesoft.org/schema/mule/secure-properties"
+	xmlns:salesforce="http://www.mulesoft.org/schema/mule/salesforce"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+http://www.mulesoft.org/schema/mule/mule-apikit http://www.mulesoft.org/schema/mule/mule-apikit/current/mule-apikit.xsd http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+	http://www.mulesoft.org/schema/mule/salesforce http://www.mulesoft.org/schema/mule/salesforce/current/mule-salesforce.xsd
+http://www.mulesoft.org/schema/mule/secure-properties http://www.mulesoft.org/schema/mule/secure-properties/current/mule-secure-properties.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/att-mule-applicationlogger http://www.mulesoft.org/schema/mule/att-mule-applicationlogger/current/mule-att-mule-applicationlogger.xsd
+http://www.mulesoft.org/schema/mule/tls http://www.mulesoft.org/schema/mule/tls/current/mule-tls.xsd
+http://www.mulesoft.org/schema/mule/api-gateway http://www.mulesoft.org/schema/mule/api-gateway/current/mule-api-gateway.xsd
+http://www.mulesoft.org/schema/mule/kafka http://www.mulesoft.org/schema/mule/kafka/current/mule-kafka.xsd">
+	<apikit:config
+		name="customer-billing-papi-config"
+		api="customer-billing-papi.raml"
+		outboundHeadersMapName="outboundHeaders"
+		httpStatusVarName="httpStatus" />
+	
+	<secure-properties:config
+		name="Secure_Properties_Config" doc:name="Secure Properties Config"
+		doc:id="2cff4c72-8018-4e30-a7c1-363fd8ee6091"
+		file="customer-billing-papi-${mule.env}.yaml"
+		key="${mule.key}" />
+	<global-property doc:name="Global Property"
+		doc:id="6c83b6fd-5fde-4bdc-9802-bc162845d4d9" name="mule.env"
+		value="dev" />
+	<global-property doc:name="Global Property"
+		doc:id="b13e68df-792d-4dae-8b6b-4715a98c2656" name="mule.key"
+		value="mKxTq&amp;W]\@+s(/3&amp;" />
+
+
+
+	<http:listener-config
+		name="customer-billing-papi-httpListenerConfig">
+		<http:listener-connection
+			host="${secure::http.host}" port="${secure::http.port}" />
+	</http:listener-config>
+
+	<att-mule-applicationlogger:config
+		name="ATT_Mule_Application_Logger_Config"
+		doc:name="ATT Mule Application Logger Config"
+		doc:id="791bb1e9-9849-4cc1-a00e-b2ffd1025be7" />
+	<http:request-config
+		name="HTTPS_Billing_MicroService_Request_config"
+		doc:name="HTTPS Request 
+		configuration"
+		doc:id="440de480-7215-4a49-a382-220cc73255e1"
+		basePath="${secure::billingMicroservice.http.basePath}">
+		<http:request-connection
+			host="${secure::billingMicroservice.http.host}"
+			port="${secure::billingMicroservice.http.port}" protocol="HTTPS"
+			maxConnections="${secure::billingMicroservice.http.maxConnections}"
+			connectionIdleTimeout="${secure::billingMicroservice.http.connTimeout}">
+			<reconnection>
+				<reconnect
+					frequency="${secure::billingMicroservice.http.reconFrequency}"
+					count="${secure::billingMicroservice.http.reconAttempts}" />
+			</reconnection>
+		</http:request-connection>
+	</http:request-config>
+	<api-gateway:autodiscovery
+		apiId="${secure::api.id}" doc:name="API Autodiscovery"
+		doc:id="fec9fafd-8306-4a9a-be21-b26714ab6efa"
+		flowRef="customer-billing-papi-main" ignoreBasePath="true" />
+</mule>

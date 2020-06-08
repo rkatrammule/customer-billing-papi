@@ -1,0 +1,1902 @@
+{
+    "content": {
+        "billInfo": {
+            "cycleStDate": "2020-01-29",
+            "cycleEndDate": "2020-02-28",
+            "ban": "198391234",
+            "address": {
+                "name": "John Doe",
+                "addressLines": [
+                    "123 Test Drive",
+                    "Sample TX  70001-2281"
+                ]
+            },
+            "fanID": "00032437",
+            "bbInstance": "01",
+            "billngSystem": "1MP",
+            "marketZone": "LSP",
+            "billingMethod": "AR"
+        },
+        "billSummary": {
+            "totalPayments": {
+                "amt": "0.00",
+                "descList": [
+                    "Payments"
+                ],
+                "amtInd": ""
+            },
+            "totalAdjustments": {
+                "amt": "0.00",
+                "descList": [
+                    "Adjustments"
+                ],
+                "amtInd": ""
+            },
+            "prevBal": {
+                "amt": "1650.09",
+                "descList": [
+                    "Your last bill"
+                ],
+                "amtInd": ""
+            },
+            "newChrgs": {
+                "amt": "430.34",
+                "descList": [
+                    "Service summary"
+                ],
+                "amtInd": ""
+            },
+            "totChrgs": {
+                "amt": "2080.43",
+                "descList": [
+                    "Total"
+                ],
+                "amtInd": ""
+            },
+            "rmningBal": {
+                "amt": "1650.09",
+                "descList": [
+                    "Remaining balance"
+                ],
+                "amtInd": ""
+            },
+            "prevRmningBal": {
+                "amt": "1219.75"
+            }
+        },
+        "wirelessChrgs": {
+            "wirelessServiceDesc": "Wireless",
+            "totalWirelessServiceAmt": {
+                "amt": "430.34",
+                "descList": [
+                    "Total"
+                ],
+                "amtInd": ""
+            },
+            "prevWirelessServiceAmt": {
+                "amt": "430.34"
+            },
+            "varWirelessServiceAmt": {
+                "amt": "0.00"
+            },
+            "wirelessServiceList": [
+                {
+                    "serviceDesc": "Group 4",
+                    "totalServiceAmt": {
+                        "amt": "63.71",
+                        "descList": [
+                            "Total"
+                        ],
+                        "amtInd": ""
+                    },
+                    "prevServiceAmt": {
+                        "amt": "63.71"
+                    },
+                    "varServiceAmt": {
+                        "amt": "0.00"
+                    },
+                    "sectionBeanList": [
+                        {
+                            "sectionDesc": "Monthly charges",
+                            "totalSectAmt": {
+                                "amt": "60.00",
+                                "descList": [
+                                    ""
+                                ],
+                                "amtInd": ""
+                            },
+                            "chargeList": [
+                                {
+                                    "date1": "2020-02-29",
+                                    "date2": "2020-03-28",
+                                    "amt": "100.00",
+                                    "descList": [
+                                        "AT&T Unlimited &More(SM) Premium Multi Line"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "2020-02-29",
+                                    "date2": "2020-03-28",
+                                    "amt": "20.00",
+                                    "descList": [
+                                        "Discount for unlimited multi line w AutoPay & Paperless Bill"
+                                    ],
+                                    "amtInd": "CR"
+                                },
+                                {
+                                    "date1": "2020-02-29",
+                                    "date2": "2020-03-28",
+                                    "amt": "20.00",
+                                    "descList": [
+                                        "Discount for Military Appreciation"
+                                    ],
+                                    "amtInd": "CR"
+                                }
+                            ],
+                            "prevSectAmt": {
+                                "amt": "60.00"
+                            },
+                            "varSectAmt": {
+                                "amt": "0.00"
+                            },
+                            "type": "MONTHLY"
+                        },
+                        {
+                            "sectionDesc": "",
+                            "totalSectAmt": {
+                                "amt": "0.20",
+                                "descList": [
+                                    ""
+                                ],
+                                "amtInd": ""
+                            },
+                            "chargeList": [
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "0.20",
+                                    "descList": [
+                                        "State Cost-Recovery Fee"
+                                    ],
+                                    "amtInd": ""
+                                }
+                            ],
+                            "prevSectAmt": {
+                                "amt": "0.20"
+                            },
+                            "varSectAmt": {
+                                "amt": "0.00"
+                            },
+                            "type": "SURCHARGE"
+                        },
+                        {
+                            "sectionDesc": "",
+                            "totalSectAmt": {
+                                "amt": "3.51",
+                                "descList": [
+                                    ""
+                                ],
+                                "amtInd": ""
+                            },
+                            "chargeList": [
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "0.42",
+                                    "descList": [
+                                        "City District Sales Tax"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "0.42",
+                                    "descList": [
+                                        "City Sales Tax"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "2.67",
+                                    "descList": [
+                                        "TX State Sales Tax"
+                                    ],
+                                    "amtInd": ""
+                                }
+                            ],
+                            "prevSectAmt": {
+                                "amt": "3.51"
+                            },
+                            "varSectAmt": {
+                                "amt": "0.00"
+                            },
+                            "type": "GOV_TAX"
+                        }
+                    ],
+                    "groupID": "000000004",
+                    "group": true,
+                    "nbrOfDevices": 9
+                },
+                {
+                    "serviceDesc": "ABBIE M MCFARLANE",
+                    "totalServiceAmt": {
+                        "amt": "88.83",
+                        "descList": [
+                            "Total"
+                        ],
+                        "amtInd": ""
+                    },
+                    "prevServiceAmt": {
+                        "amt": "88.83"
+                    },
+                    "varServiceAmt": {
+                        "amt": "0.00"
+                    },
+                    "sectionBeanList": [
+                        {
+                            "sectionDesc": "Monthly charges",
+                            "totalSectAmt": {
+                                "amt": "77.92",
+                                "descList": [
+                                    ""
+                                ],
+                                "amtInd": ""
+                            },
+                            "chargeList": [
+                                {
+                                    "date1": "2020-02-29",
+                                    "date2": "2020-03-28",
+                                    "amt": "35.00",
+                                    "descList": [
+                                        "Access for iPhone 4G LTE w/ VVM"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "2020-02-29",
+                                    "date2": "2020-03-28",
+                                    "amt": "8.75",
+                                    "descList": [
+                                        "Discount for Military Appreciation"
+                                    ],
+                                    "amtInd": "CR"
+                                },
+                                {
+                                    "date1": "2020-02-29",
+                                    "date2": "2020-03-28",
+                                    "amt": "0.00",
+                                    "descList": [
+                                        "International Day Pass"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "2020-02-29",
+                                    "date2": "2020-03-28",
+                                    "amt": "0.00",
+                                    "descList": [
+                                        "International Roaming - Expanded"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "2020-02-29",
+                                    "date2": "2020-03-28",
+                                    "amt": "8.99",
+                                    "descList": [
+                                        "Mobile Insurance Premium"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "2020-02-29",
+                                    "date2": "2020-03-28",
+                                    "amt": "6.01",
+                                    "descList": [
+                                        "ProTech for 1 Fee"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "2020-02-29",
+                                    "date2": "2020-03-28",
+                                    "amt": "0.00",
+                                    "descList": [
+                                        "See News You Can Use 911 TTY Message"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "2020-02-20",
+                                    "date2": "",
+                                    "amt": "36.67",
+                                    "descList": [
+                                        "APPLE 64GB - Installment 11 of 30"
+                                    ],
+                                    "amtInd": ""
+                                }
+                            ],
+                            "prevSectAmt": {
+                                "amt": "77.92"
+                            },
+                            "varSectAmt": {
+                                "amt": "0.00"
+                            },
+                            "type": "MONTHLY"
+                        },
+                        {
+                            "sectionDesc": "Surcharges & fees",
+                            "totalSectAmt": {
+                                "amt": "6.43",
+                                "descList": [
+                                    ""
+                                ],
+                                "amtInd": ""
+                            },
+                            "chargeList": [
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "1.99",
+                                    "descList": [
+                                        "Administrative Fee"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "2.18",
+                                    "descList": [
+                                        "Federal Universal Service Charge"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "1.50",
+                                    "descList": [
+                                        "Regulatory Cost Recovery Charge"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "0.12",
+                                    "descList": [
+                                        "State Cost-Recovery Fee"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "0.64",
+                                    "descList": [
+                                        "Texas Universal Service"
+                                    ],
+                                    "amtInd": ""
+                                }
+                            ],
+                            "prevSectAmt": {
+                                "amt": "6.43"
+                            },
+                            "varSectAmt": {
+                                "amt": "0.00"
+                            },
+                            "type": "SURCHARGE"
+                        },
+                        {
+                            "sectionDesc": "Government taxes & fees",
+                            "totalSectAmt": {
+                                "amt": "4.48",
+                                "descList": [
+                                    ""
+                                ],
+                                "amtInd": ""
+                            },
+                            "chargeList": [
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "0.50",
+                                    "descList": [
+                                        "9-1-1 Service Fee"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "0.06",
+                                    "descList": [
+                                        "911 Equalization Surcharge"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "0.15",
+                                    "descList": [
+                                        "City District Sales Tax"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "0.32",
+                                    "descList": [
+                                        "City District Sales Tax - Telecom"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "0.15",
+                                    "descList": [
+                                        "City Sales Tax"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "0.32",
+                                    "descList": [
+                                        "City Sales Tax - Telecom"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "0.94",
+                                    "descList": [
+                                        "TX State Sales Tax"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "2.04",
+                                    "descList": [
+                                        "TX State Sales Tax - Telecom"
+                                    ],
+                                    "amtInd": ""
+                                }
+                            ],
+                            "prevSectAmt": {
+                                "amt": "4.48"
+                            },
+                            "varSectAmt": {
+                                "amt": "0.00"
+                            },
+                            "type": "GOV_TAX"
+                        }
+                    ],
+                    "ctn": "214-549-1489",
+                    "ctnUser": "ABBIE M MCFARLANE",
+                    "groupID": "000000004",
+                    "group": false,
+                    "nbrOfDevices": 1
+                },
+                {
+                    "serviceDesc": "ROBERT MCFARLANE",
+                    "totalServiceAmt": {
+                        "amt": "12.24",
+                        "descList": [
+                            "Total"
+                        ],
+                        "amtInd": ""
+                    },
+                    "prevServiceAmt": {
+                        "amt": "12.24"
+                    },
+                    "varServiceAmt": {
+                        "amt": "0.00"
+                    },
+                    "sectionBeanList": [
+                        {
+                            "sectionDesc": "Monthly charges",
+                            "totalSectAmt": {
+                                "amt": "7.50",
+                                "descList": [
+                                    ""
+                                ],
+                                "amtInd": ""
+                            },
+                            "chargeList": [
+                                {
+                                    "date1": "2020-02-29",
+                                    "date2": "2020-03-28",
+                                    "amt": "10.00",
+                                    "descList": [
+                                        "Access for Apple Watch"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "2020-02-29",
+                                    "date2": "2020-03-28",
+                                    "amt": "2.50",
+                                    "descList": [
+                                        "Discount for Military Appreciation"
+                                    ],
+                                    "amtInd": "CR"
+                                },
+                                {
+                                    "date1": "2020-02-29",
+                                    "date2": "2020-03-28",
+                                    "amt": "0.00",
+                                    "descList": [
+                                        "NumberSync Apple Watch"
+                                    ],
+                                    "amtInd": ""
+                                }
+                            ],
+                            "prevSectAmt": {
+                                "amt": "7.50"
+                            },
+                            "varSectAmt": {
+                                "amt": "0.00"
+                            },
+                            "type": "MONTHLY"
+                        },
+                        {
+                            "sectionDesc": "Surcharges & fees",
+                            "totalSectAmt": {
+                                "amt": "3.86",
+                                "descList": [
+                                    ""
+                                ],
+                                "amtInd": ""
+                            },
+                            "chargeList": [
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "1.99",
+                                    "descList": [
+                                        "Administrative Fee"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "0.26",
+                                    "descList": [
+                                        "Federal Universal Service Charge"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "1.50",
+                                    "descList": [
+                                        "Regulatory Cost Recovery Charge"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "0.04",
+                                    "descList": [
+                                        "State Cost-Recovery Fee"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "0.07",
+                                    "descList": [
+                                        "Texas Universal Service"
+                                    ],
+                                    "amtInd": ""
+                                }
+                            ],
+                            "prevSectAmt": {
+                                "amt": "3.86"
+                            },
+                            "varSectAmt": {
+                                "amt": "0.00"
+                            },
+                            "type": "SURCHARGE"
+                        },
+                        {
+                            "sectionDesc": "Government taxes & fees",
+                            "totalSectAmt": {
+                                "amt": "0.88",
+                                "descList": [
+                                    ""
+                                ],
+                                "amtInd": ""
+                            },
+                            "chargeList": [
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "0.50",
+                                    "descList": [
+                                        "9-1-1 Service Fee"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "0.06",
+                                    "descList": [
+                                        "911 Equalization Surcharge"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "0.04",
+                                    "descList": [
+                                        "City District Sales Tax - Telecom"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "0.04",
+                                    "descList": [
+                                        "City Sales Tax - Telecom"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "0.24",
+                                    "descList": [
+                                        "TX State Sales Tax - Telecom"
+                                    ],
+                                    "amtInd": ""
+                                }
+                            ],
+                            "prevSectAmt": {
+                                "amt": "0.88"
+                            },
+                            "varSectAmt": {
+                                "amt": "0.00"
+                            },
+                            "type": "GOV_TAX"
+                        }
+                    ],
+                    "ctn": "214-600-1114",
+                    "ctnUser": "ROBERT MCFARLANE",
+                    "groupID": "000000004",
+                    "group": false,
+                    "nbrOfDevices": 1
+                },
+                {
+                    "serviceDesc": "ROBERT MC*FARLANE",
+                    "totalServiceAmt": {
+                        "amt": "22.54",
+                        "descList": [
+                            "Total"
+                        ],
+                        "amtInd": ""
+                    },
+                    "prevServiceAmt": {
+                        "amt": "22.54"
+                    },
+                    "varServiceAmt": {
+                        "amt": "0.00"
+                    },
+                    "sectionBeanList": [
+                        {
+                            "sectionDesc": "Monthly charges",
+                            "totalSectAmt": {
+                                "amt": "15.00",
+                                "descList": [
+                                    ""
+                                ],
+                                "amtInd": ""
+                            },
+                            "chargeList": [
+                                {
+                                    "date1": "2020-02-29",
+                                    "date2": "2020-03-28",
+                                    "amt": "20.00",
+                                    "descList": [
+                                        "Access for Wireless Home Phone"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "2020-02-29",
+                                    "date2": "2020-03-28",
+                                    "amt": "5.00",
+                                    "descList": [
+                                        "Discount for Military Appreciation"
+                                    ],
+                                    "amtInd": "CR"
+                                },
+                                {
+                                    "date1": "2020-02-29",
+                                    "date2": "2020-03-28",
+                                    "amt": "0.00",
+                                    "descList": [
+                                        "International Roaming Block"
+                                    ],
+                                    "amtInd": ""
+                                }
+                            ],
+                            "prevSectAmt": {
+                                "amt": "15.00"
+                            },
+                            "varSectAmt": {
+                                "amt": "0.00"
+                            },
+                            "type": "MONTHLY"
+                        },
+                        {
+                            "sectionDesc": "Surcharges & fees",
+                            "totalSectAmt": {
+                                "amt": "5.31",
+                                "descList": [
+                                    ""
+                                ],
+                                "amtInd": ""
+                            },
+                            "chargeList": [
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "1.99",
+                                    "descList": [
+                                        "Administrative Fee"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "1.35",
+                                    "descList": [
+                                        "Federal Universal Service Charge"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "1.50",
+                                    "descList": [
+                                        "Regulatory Cost Recovery Charge"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "0.08",
+                                    "descList": [
+                                        "State Cost-Recovery Fee"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "0.39",
+                                    "descList": [
+                                        "Texas Universal Service"
+                                    ],
+                                    "amtInd": ""
+                                }
+                            ],
+                            "prevSectAmt": {
+                                "amt": "5.31"
+                            },
+                            "varSectAmt": {
+                                "amt": "0.00"
+                            },
+                            "type": "SURCHARGE"
+                        },
+                        {
+                            "sectionDesc": "Government taxes & fees",
+                            "totalSectAmt": {
+                                "amt": "2.23",
+                                "descList": [
+                                    ""
+                                ],
+                                "amtInd": ""
+                            },
+                            "chargeList": [
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "0.50",
+                                    "descList": [
+                                        "9-1-1 Service Fee"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "0.06",
+                                    "descList": [
+                                        "911 Equalization Surcharge"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "0.20",
+                                    "descList": [
+                                        "City District Sales Tax - Telecom"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "0.20",
+                                    "descList": [
+                                        "City Sales Tax - Telecom"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "1.27",
+                                    "descList": [
+                                        "TX State Sales Tax - Telecom"
+                                    ],
+                                    "amtInd": ""
+                                }
+                            ],
+                            "prevSectAmt": {
+                                "amt": "2.23"
+                            },
+                            "varSectAmt": {
+                                "amt": "0.00"
+                            },
+                            "type": "GOV_TAX"
+                        }
+                    ],
+                    "ctn": "214-677-9500",
+                    "ctnUser": "ROBERT MC*FARLANE",
+                    "groupID": "000000004",
+                    "group": false,
+                    "nbrOfDevices": 1
+                },
+                {
+                    "serviceDesc": "ROBERT J MCFARLANE",
+                    "totalServiceAmt": {
+                        "amt": "77.85",
+                        "descList": [
+                            "Total"
+                        ],
+                        "amtInd": ""
+                    },
+                    "prevServiceAmt": {
+                        "amt": "77.85"
+                    },
+                    "varServiceAmt": {
+                        "amt": "0.00"
+                    },
+                    "sectionBeanList": [
+                        {
+                            "sectionDesc": "Monthly charges",
+                            "totalSectAmt": {
+                                "amt": "66.91",
+                                "descList": [
+                                    ""
+                                ],
+                                "amtInd": ""
+                            },
+                            "chargeList": [
+                                {
+                                    "date1": "2020-02-29",
+                                    "date2": "2020-03-28",
+                                    "amt": "35.00",
+                                    "descList": [
+                                        "Access for iPhone 4G LTE w/ VVM"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "2020-02-29",
+                                    "date2": "2020-03-28",
+                                    "amt": "8.75",
+                                    "descList": [
+                                        "Discount for Military Appreciation"
+                                    ],
+                                    "amtInd": "CR"
+                                },
+                                {
+                                    "date1": "2020-02-29",
+                                    "date2": "2020-03-28",
+                                    "amt": "0.00",
+                                    "descList": [
+                                        "DIRECTV eligible"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "2020-02-29",
+                                    "date2": "2020-03-28",
+                                    "amt": "0.00",
+                                    "descList": [
+                                        "International Day Pass"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "2020-02-29",
+                                    "date2": "2020-03-28",
+                                    "amt": "0.00",
+                                    "descList": [
+                                        "See News You Can Use 911 TTY Message"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "2020-02-29",
+                                    "date2": "2020-03-28",
+                                    "amt": "3.99",
+                                    "descList": [
+                                        "World Connect"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "2020-02-29",
+                                    "date2": "2020-03-28",
+                                    "amt": "0.00",
+                                    "descList": [
+                                        "NumberSync"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "2020-02-23",
+                                    "date2": "",
+                                    "amt": "36.67",
+                                    "descList": [
+                                        "APPLE IPHONE 11 PRO MAX - 64GB - SPACE - Installment  6 of 30"
+                                    ],
+                                    "amtInd": ""
+                                }
+                            ],
+                            "prevSectAmt": {
+                                "amt": "66.91"
+                            },
+                            "varSectAmt": {
+                                "amt": "0.00"
+                            },
+                            "type": "MONTHLY"
+                        },
+                        {
+                            "sectionDesc": "Surcharges & fees",
+                            "totalSectAmt": {
+                                "amt": "7.30",
+                                "descList": [
+                                    ""
+                                ],
+                                "amtInd": ""
+                            },
+                            "chargeList": [
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "1.99",
+                                    "descList": [
+                                        "Administrative Fee"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "3.03",
+                                    "descList": [
+                                        "Federal Universal Service Charge"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "1.50",
+                                    "descList": [
+                                        "Regulatory Cost Recovery Charge"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "0.14",
+                                    "descList": [
+                                        "State Cost-Recovery Fee"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "0.64",
+                                    "descList": [
+                                        "Texas Universal Service"
+                                    ],
+                                    "amtInd": ""
+                                }
+                            ],
+                            "prevSectAmt": {
+                                "amt": "7.30"
+                            },
+                            "varSectAmt": {
+                                "amt": "0.00"
+                            },
+                            "type": "SURCHARGE"
+                        },
+                        {
+                            "sectionDesc": "Government taxes & fees",
+                            "totalSectAmt": {
+                                "amt": "3.64",
+                                "descList": [
+                                    ""
+                                ],
+                                "amtInd": ""
+                            },
+                            "chargeList": [
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "0.50",
+                                    "descList": [
+                                        "9-1-1 Service Fee"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "0.06",
+                                    "descList": [
+                                        "911 Equalization Surcharge"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "0.37",
+                                    "descList": [
+                                        "City District Sales Tax - Telecom"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "0.37",
+                                    "descList": [
+                                        "City Sales Tax - Telecom"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "2.34",
+                                    "descList": [
+                                        "TX State Sales Tax - Telecom"
+                                    ],
+                                    "amtInd": ""
+                                }
+                            ],
+                            "prevSectAmt": {
+                                "amt": "3.64"
+                            },
+                            "varSectAmt": {
+                                "amt": "0.00"
+                            },
+                            "type": "GOV_TAX"
+                        }
+                    ],
+                    "ctn": "214-878-8406",
+                    "ctnUser": "ROBERT J MCFARLANE",
+                    "groupID": "000000004",
+                    "group": false,
+                    "nbrOfDevices": 1
+                },
+                {
+                    "serviceDesc": "ROBERT MCFARLANE",
+                    "totalServiceAmt": {
+                        "amt": "20.08",
+                        "descList": [
+                            "Total"
+                        ],
+                        "amtInd": ""
+                    },
+                    "prevServiceAmt": {
+                        "amt": "20.08"
+                    },
+                    "varServiceAmt": {
+                        "amt": "0.00"
+                    },
+                    "sectionBeanList": [
+                        {
+                            "sectionDesc": "Monthly charges",
+                            "totalSectAmt": {
+                                "amt": "15.00",
+                                "descList": [
+                                    ""
+                                ],
+                                "amtInd": ""
+                            },
+                            "chargeList": [
+                                {
+                                    "date1": "2020-02-29",
+                                    "date2": "2020-03-28",
+                                    "amt": "20.00",
+                                    "descList": [
+                                        "Access for iPad 4G LTE"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "2020-02-29",
+                                    "date2": "2020-03-28",
+                                    "amt": "5.00",
+                                    "descList": [
+                                        "Discount for Military Appreciation"
+                                    ],
+                                    "amtInd": "CR"
+                                }
+                            ],
+                            "prevSectAmt": {
+                                "amt": "15.00"
+                            },
+                            "varSectAmt": {
+                                "amt": "0.00"
+                            },
+                            "type": "MONTHLY"
+                        },
+                        {
+                            "sectionDesc": "Surcharges & fees",
+                            "totalSectAmt": {
+                                "amt": "3.56",
+                                "descList": [
+                                    ""
+                                ],
+                                "amtInd": ""
+                            },
+                            "chargeList": [
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "1.99",
+                                    "descList": [
+                                        "Administrative Fee"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "1.50",
+                                    "descList": [
+                                        "Regulatory Cost Recovery Charge"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "0.07",
+                                    "descList": [
+                                        "State Cost-Recovery Fee"
+                                    ],
+                                    "amtInd": ""
+                                }
+                            ],
+                            "prevSectAmt": {
+                                "amt": "3.56"
+                            },
+                            "varSectAmt": {
+                                "amt": "0.00"
+                            },
+                            "type": "SURCHARGE"
+                        },
+                        {
+                            "sectionDesc": "Government taxes & fees",
+                            "totalSectAmt": {
+                                "amt": "1.52",
+                                "descList": [
+                                    ""
+                                ],
+                                "amtInd": ""
+                            },
+                            "chargeList": [
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "0.37",
+                                    "descList": [
+                                        "City Sales Tax"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "1.15",
+                                    "descList": [
+                                        "TX State Sales Tax"
+                                    ],
+                                    "amtInd": ""
+                                }
+                            ],
+                            "prevSectAmt": {
+                                "amt": "1.52"
+                            },
+                            "varSectAmt": {
+                                "amt": "0.00"
+                            },
+                            "type": "GOV_TAX"
+                        }
+                    ],
+                    "ctn": "469-492-6015",
+                    "ctnUser": "ROBERT MCFARLANE",
+                    "groupID": "000000004",
+                    "group": false,
+                    "nbrOfDevices": 1
+                },
+                {
+                    "serviceDesc": "ROBERT MC*FARLANE",
+                    "totalServiceAmt": {
+                        "amt": "20.09",
+                        "descList": [
+                            "Total"
+                        ],
+                        "amtInd": ""
+                    },
+                    "prevServiceAmt": {
+                        "amt": "20.09"
+                    },
+                    "varServiceAmt": {
+                        "amt": "0.00"
+                    },
+                    "sectionBeanList": [
+                        {
+                            "sectionDesc": "Monthly charges",
+                            "totalSectAmt": {
+                                "amt": "15.00",
+                                "descList": [
+                                    ""
+                                ],
+                                "amtInd": ""
+                            },
+                            "chargeList": [
+                                {
+                                    "date1": "2020-02-29",
+                                    "date2": "2020-03-28",
+                                    "amt": "20.00",
+                                    "descList": [
+                                        "Access for iPad 4G LTE"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "2020-02-29",
+                                    "date2": "2020-03-28",
+                                    "amt": "5.00",
+                                    "descList": [
+                                        "Discount for Military Appreciation"
+                                    ],
+                                    "amtInd": "CR"
+                                }
+                            ],
+                            "prevSectAmt": {
+                                "amt": "15.00"
+                            },
+                            "varSectAmt": {
+                                "amt": "0.00"
+                            },
+                            "type": "MONTHLY"
+                        },
+                        {
+                            "sectionDesc": "Surcharges & fees",
+                            "totalSectAmt": {
+                                "amt": "3.56",
+                                "descList": [
+                                    ""
+                                ],
+                                "amtInd": ""
+                            },
+                            "chargeList": [
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "1.99",
+                                    "descList": [
+                                        "Administrative Fee"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "1.50",
+                                    "descList": [
+                                        "Regulatory Cost Recovery Charge"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "0.07",
+                                    "descList": [
+                                        "State Cost-Recovery Fee"
+                                    ],
+                                    "amtInd": ""
+                                }
+                            ],
+                            "prevSectAmt": {
+                                "amt": "3.56"
+                            },
+                            "varSectAmt": {
+                                "amt": "0.00"
+                            },
+                            "type": "SURCHARGE"
+                        },
+                        {
+                            "sectionDesc": "Government taxes & fees",
+                            "totalSectAmt": {
+                                "amt": "1.53",
+                                "descList": [
+                                    ""
+                                ],
+                                "amtInd": ""
+                            },
+                            "chargeList": [
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "0.19",
+                                    "descList": [
+                                        "City District Sales Tax"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "0.19",
+                                    "descList": [
+                                        "City Sales Tax"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "1.15",
+                                    "descList": [
+                                        "TX State Sales Tax"
+                                    ],
+                                    "amtInd": ""
+                                }
+                            ],
+                            "prevSectAmt": {
+                                "amt": "1.53"
+                            },
+                            "varSectAmt": {
+                                "amt": "0.00"
+                            },
+                            "type": "GOV_TAX"
+                        }
+                    ],
+                    "ctn": "469-662-8757",
+                    "ctnUser": "ROBERT MC*FARLANE",
+                    "groupID": "000000004",
+                    "group": false,
+                    "nbrOfDevices": 1
+                },
+                {
+                    "serviceDesc": "ROBERT MCFARLANE",
+                    "totalServiceAmt": {
+                        "amt": "84.82",
+                        "descList": [
+                            "Total"
+                        ],
+                        "amtInd": ""
+                    },
+                    "prevServiceAmt": {
+                        "amt": "84.82"
+                    },
+                    "varServiceAmt": {
+                        "amt": "0.00"
+                    },
+                    "sectionBeanList": [
+                        {
+                            "sectionDesc": "Monthly charges",
+                            "totalSectAmt": {
+                                "amt": "78.99",
+                                "descList": [
+                                    ""
+                                ],
+                                "amtInd": ""
+                            },
+                            "chargeList": [
+                                {
+                                    "date1": "2020-02-29",
+                                    "date2": "2020-03-28",
+                                    "amt": "20.00",
+                                    "descList": [
+                                        "Access for iPad 4G LTE"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "2020-02-29",
+                                    "date2": "2020-03-28",
+                                    "amt": "5.00",
+                                    "descList": [
+                                        "Discount for Military Appreciation"
+                                    ],
+                                    "amtInd": "CR"
+                                },
+                                {
+                                    "date1": "2020-02-29",
+                                    "date2": "2020-03-28",
+                                    "amt": "8.99",
+                                    "descList": [
+                                        "Mobile Insurance Premium"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "2020-02-09",
+                                    "date2": "",
+                                    "amt": "55.00",
+                                    "descList": [
+                                        "COM APL PRO 11 256GB SGY - Installment  7 of 20"
+                                    ],
+                                    "amtInd": ""
+                                }
+                            ],
+                            "prevSectAmt": {
+                                "amt": "78.99"
+                            },
+                            "varSectAmt": {
+                                "amt": "0.00"
+                            },
+                            "type": "MONTHLY"
+                        },
+                        {
+                            "sectionDesc": "Surcharges & fees",
+                            "totalSectAmt": {
+                                "amt": "3.56",
+                                "descList": [
+                                    ""
+                                ],
+                                "amtInd": ""
+                            },
+                            "chargeList": [
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "1.99",
+                                    "descList": [
+                                        "Administrative Fee"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "1.50",
+                                    "descList": [
+                                        "Regulatory Cost Recovery Charge"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "0.07",
+                                    "descList": [
+                                        "State Cost-Recovery Fee"
+                                    ],
+                                    "amtInd": ""
+                                }
+                            ],
+                            "prevSectAmt": {
+                                "amt": "3.56"
+                            },
+                            "varSectAmt": {
+                                "amt": "0.00"
+                            },
+                            "type": "SURCHARGE"
+                        },
+                        {
+                            "sectionDesc": "Government taxes & fees",
+                            "totalSectAmt": {
+                                "amt": "2.27",
+                                "descList": [
+                                    ""
+                                ],
+                                "amtInd": ""
+                            },
+                            "chargeList": [
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "0.28",
+                                    "descList": [
+                                        "City District Sales Tax"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "0.28",
+                                    "descList": [
+                                        "City Sales Tax"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "1.71",
+                                    "descList": [
+                                        "TX State Sales Tax"
+                                    ],
+                                    "amtInd": ""
+                                }
+                            ],
+                            "prevSectAmt": {
+                                "amt": "2.27"
+                            },
+                            "varSectAmt": {
+                                "amt": "0.00"
+                            },
+                            "type": "GOV_TAX"
+                        }
+                    ],
+                    "ctn": "469-818-2735",
+                    "ctnUser": "ROBERT MCFARLANE",
+                    "groupID": "000000004",
+                    "group": false,
+                    "nbrOfDevices": 1
+                },
+                {
+                    "serviceDesc": "ROBERT MC*FARLANE",
+                    "totalServiceAmt": {
+                        "amt": "20.09",
+                        "descList": [
+                            "Total"
+                        ],
+                        "amtInd": ""
+                    },
+                    "prevServiceAmt": {
+                        "amt": "20.09"
+                    },
+                    "varServiceAmt": {
+                        "amt": "0.00"
+                    },
+                    "sectionBeanList": [
+                        {
+                            "sectionDesc": "Monthly charges",
+                            "totalSectAmt": {
+                                "amt": "15.00",
+                                "descList": [
+                                    ""
+                                ],
+                                "amtInd": ""
+                            },
+                            "chargeList": [
+                                {
+                                    "date1": "2020-02-29",
+                                    "date2": "2020-03-28",
+                                    "amt": "20.00",
+                                    "descList": [
+                                        "Access for iPad 4G LTE"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "2020-02-29",
+                                    "date2": "2020-03-28",
+                                    "amt": "5.00",
+                                    "descList": [
+                                        "Discount for Military Appreciation"
+                                    ],
+                                    "amtInd": "CR"
+                                }
+                            ],
+                            "prevSectAmt": {
+                                "amt": "15.00"
+                            },
+                            "varSectAmt": {
+                                "amt": "0.00"
+                            },
+                            "type": "MONTHLY"
+                        },
+                        {
+                            "sectionDesc": "Surcharges & fees",
+                            "totalSectAmt": {
+                                "amt": "3.56",
+                                "descList": [
+                                    ""
+                                ],
+                                "amtInd": ""
+                            },
+                            "chargeList": [
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "1.99",
+                                    "descList": [
+                                        "Administrative Fee"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "1.50",
+                                    "descList": [
+                                        "Regulatory Cost Recovery Charge"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "0.07",
+                                    "descList": [
+                                        "State Cost-Recovery Fee"
+                                    ],
+                                    "amtInd": ""
+                                }
+                            ],
+                            "prevSectAmt": {
+                                "amt": "3.56"
+                            },
+                            "varSectAmt": {
+                                "amt": "0.00"
+                            },
+                            "type": "SURCHARGE"
+                        },
+                        {
+                            "sectionDesc": "Government taxes & fees",
+                            "totalSectAmt": {
+                                "amt": "1.53",
+                                "descList": [
+                                    ""
+                                ],
+                                "amtInd": ""
+                            },
+                            "chargeList": [
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "0.19",
+                                    "descList": [
+                                        "City District Sales Tax"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "0.19",
+                                    "descList": [
+                                        "City Sales Tax"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "1.15",
+                                    "descList": [
+                                        "TX State Sales Tax"
+                                    ],
+                                    "amtInd": ""
+                                }
+                            ],
+                            "prevSectAmt": {
+                                "amt": "1.53"
+                            },
+                            "varSectAmt": {
+                                "amt": "0.00"
+                            },
+                            "type": "GOV_TAX"
+                        }
+                    ],
+                    "ctn": "469-818-6283",
+                    "ctnUser": "ROBERT MC*FARLANE",
+                    "groupID": "000000004",
+                    "group": false,
+                    "nbrOfDevices": 1
+                },
+                {
+                    "serviceDesc": "ROBERT MCFARLANE",
+                    "totalServiceAmt": {
+                        "amt": "20.09",
+                        "descList": [
+                            "Total"
+                        ],
+                        "amtInd": ""
+                    },
+                    "prevServiceAmt": {
+                        "amt": "20.09"
+                    },
+                    "varServiceAmt": {
+                        "amt": "0.00"
+                    },
+                    "sectionBeanList": [
+                        {
+                            "sectionDesc": "Monthly charges",
+                            "totalSectAmt": {
+                                "amt": "15.00",
+                                "descList": [
+                                    ""
+                                ],
+                                "amtInd": ""
+                            },
+                            "chargeList": [
+                                {
+                                    "date1": "2020-02-29",
+                                    "date2": "2020-03-28",
+                                    "amt": "20.00",
+                                    "descList": [
+                                        "Access for iPad 4G LTE"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "2020-02-29",
+                                    "date2": "2020-03-28",
+                                    "amt": "5.00",
+                                    "descList": [
+                                        "Discount for Military Appreciation"
+                                    ],
+                                    "amtInd": "CR"
+                                }
+                            ],
+                            "prevSectAmt": {
+                                "amt": "15.00"
+                            },
+                            "varSectAmt": {
+                                "amt": "0.00"
+                            },
+                            "type": "MONTHLY"
+                        },
+                        {
+                            "sectionDesc": "Surcharges & fees",
+                            "totalSectAmt": {
+                                "amt": "3.56",
+                                "descList": [
+                                    ""
+                                ],
+                                "amtInd": ""
+                            },
+                            "chargeList": [
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "1.99",
+                                    "descList": [
+                                        "Administrative Fee"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "1.50",
+                                    "descList": [
+                                        "Regulatory Cost Recovery Charge"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "0.07",
+                                    "descList": [
+                                        "State Cost-Recovery Fee"
+                                    ],
+                                    "amtInd": ""
+                                }
+                            ],
+                            "prevSectAmt": {
+                                "amt": "3.56"
+                            },
+                            "varSectAmt": {
+                                "amt": "0.00"
+                            },
+                            "type": "SURCHARGE"
+                        },
+                        {
+                            "sectionDesc": "Government taxes & fees",
+                            "totalSectAmt": {
+                                "amt": "1.53",
+                                "descList": [
+                                    ""
+                                ],
+                                "amtInd": ""
+                            },
+                            "chargeList": [
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "0.19",
+                                    "descList": [
+                                        "City District Sales Tax"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "0.19",
+                                    "descList": [
+                                        "City Sales Tax"
+                                    ],
+                                    "amtInd": ""
+                                },
+                                {
+                                    "date1": "",
+                                    "date2": "",
+                                    "amt": "1.15",
+                                    "descList": [
+                                        "TX State Sales Tax"
+                                    ],
+                                    "amtInd": ""
+                                }
+                            ],
+                            "prevSectAmt": {
+                                "amt": "1.53"
+                            },
+                            "varSectAmt": {
+                                "amt": "0.00"
+                            },
+                            "type": "GOV_TAX"
+                        }
+                    ],
+                    "ctn": "972-971-6797",
+                    "ctnUser": "ROBERT MCFARLANE",
+                    "groupID": "000000004",
+                    "group": false,
+                    "nbrOfDevices": 1
+                }
+            ]
+        },
+        "billFound": true
+    }
+}

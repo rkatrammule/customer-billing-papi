@@ -1,0 +1,96 @@
+#%RAML 1.0
+title: Customer Billing Process API
+version: v1
+baseUri: https://{host}/{apiName}-{env}/{version}
+baseUriParameters:
+  host:
+    example: "api.att.com"      
+  apiName: 
+    example: "customer-billing-papi"      
+  env:
+      example: "qa"        
+  version:
+      example : "v1" 
+     
+securitySchemes:
+protocols:
+  - HTTPS  
+traits:
+  client-id-secret-required:
+    headers:
+      client_id:
+        type: string
+      client_secret:
+        type: string
+  standard-error:
+    responses:
+      500:
+        body:
+          application/json:
+            example:
+              !include examples/errorMessage.json
+types:
+  billSummaryDetails : !include dataTypes/billSummaryDataType.raml
+
+/billing:
+  /accounts:    
+    /summary:                
+         post:
+          is: [client-id-secret-required,standard-error]
+          body:
+            application/json:
+              type: billSummaryDetails[]
+              example:
+                !include examples/postBillSummaryReqExample.json 
+          responses:
+                200:
+                  body:
+                    application/json:
+                      !include examples/getBillingSummaryResExample.json           
+                       
+          
+  /{productId}:
+    uriParameters:
+      productId:
+        enum:
+          - Wireless
+          - Wireline
+          - OTT
+    /currentBill:
+      /{ban}:
+        uriParameters:
+          ban:
+            description: Billing Account Number      
+        get:
+          description: To get the current bill charges of the product
+          responses:
+            200:
+              body:
+                application/json:
+                  examples:
+                    OTT : !include examples/getOTTSummaryResExample.json
+                  
+                      
+    /statements:
+      /{statementId}:
+        description: For Telegence and Enabler it's the statement id for OTT it's the accountid 
+        /details:
+          get:
+            is: [client-id-secret-required,standard-error]           
+            responses:
+              200:
+                body:
+                  application/json:
+                    !include examples/getBillDetailsResExample.json
+        /pdf:
+          get:          
+            is: [client-id-secret-required,standard-error]           
+            responses:
+              200:
+                body:
+                                
+                  application/json:
+                    examples: 
+                          success: !include examples/getBillingPDFResExample.json
+                          error: !include examples/getBillingErrorPDFResExample.json
+            

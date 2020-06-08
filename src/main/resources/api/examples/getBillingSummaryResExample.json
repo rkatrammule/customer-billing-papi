@@ -1,0 +1,815 @@
+{
+    
+        "Wireline": [
+            {
+                "statementID": "20200228-100398965-ENBLR-V",
+                "cycleStartDate": "01/29/2020",
+                "cycleEndDate": "02/28/2020",
+                "billDueDate": "03/20/2020",
+                "totalAmountDue": {
+                    "amt": "2080.43"
+                },
+                "ban": "100398965",
+                "billType": "ENBLR"
+            },
+            {
+                "statementID": "20200128-100398965-ENBLR-V",
+                "cycleStartDate": "12/29/2020",
+                "cycleEndDate": "01/28/2020",
+                "billDueDate": "02/13/2020",
+                "totalAmountDue": {
+                    "amt": "1650.09"
+                },
+                "ban": "100398965",
+                "billType": "ENBLR"
+            },
+            {
+                "statementID": "20191228-100398965-ENBLR-V",
+                "cycleStartDate": "11/29/2019",
+                "cycleEndDate": "12/28/2019",
+                "billDueDate": "01/29/2020",
+                "totalAmountDue": {
+                    "amt": "1219.75"
+                },
+                "ban": "100398965",
+                "billType": "ENBLR"
+            }],
+          "Wireless" : [
+            {
+                "statementID": "20191128-100398965-ENBLR-V",
+                "cycleStartDate": "10/29/2019",
+                "cycleEndDate": "11/28/2019",
+                "billDueDate": "12/21/2019",
+                "totalAmountDue": {
+                    "amt": "4990.12"
+                },
+                "ban": "100398965",
+                "billType": "ENBLR"
+            },
+            {
+                "statementID": "20191028-100398965-ENBLR-V",
+                "cycleStartDate": "09/29/2019",
+                "cycleEndDate": "10/28/2019",
+                "billDueDate": "11/14/2019",
+                "totalAmountDue": {
+                    "amt": "4645.32"
+                },
+                "ban": "100398965",
+                "billType": "ENBLR"
+            },
+            {
+                "statementID": "20190928-100398965-ENBLR-V",
+                "cycleStartDate": "08/29/2019",
+                "cycleEndDate": "09/28/2019",
+                "billDueDate": "10/14/2019",
+                "totalAmountDue": {
+                    "amt": "4259.73"
+                },
+                "ban": "100398965",
+                "billType": "ENBLR"
+            }
+            ],
+            "OTT" : [
+            {
+            
+                "content": {
+        "startDate": "2020-01-10",
+        "endDate": "2020-02-20",
+        "searchCategory": "ALL",
+        "histories": [
+            {
+                "date": "1581975877000",
+                "dateUTC": "2020-02-17T16:44:37.000Z",
+                "category": "payment",
+                "id": "15492419",
+                "type": "Renewal",
+                "status": "Posted",
+                "amount": "99.29",
+                "paymentDetail": {
+                    "forInvoice": "15034703",
+                    "response": "This transaction has been approved.",
+                    "totalPriceCharged": "92.36",
+                    "totalTaxes": "6.93",
+                    "totalAdjustments": "0.00",
+                    "paymentMethodItem": {
+                        "paymentMethod": "Credit/Debit Card",
+                        "cardType": "MasterCard",
+                        "cardNumber": "XXXXXXXXXXXX6100",
+                        "cardExpDate": "12/2021"
+                    },
+                    "invoiceDetail": {
+                        "currentState": "Closed",
+                        "beginningBalance": "99.29",
+                        "totalPayments": "99.29",
+                        "totalAdjustments": "0.00",
+                        "totalProductCharges": "92.36",
+                        "totalTaxes": "6.93",
+                        "orderItems": [
+                            {
+                                "itemName": "Ultimate",
+                                "description": "ULTIMATE",
+                                "retailPrice": "135.00",
+                                "priceCharged": "135.00",
+                                "taxCharged": "6.00",
+                                "fromDate": "2020-02-14",
+                                "toDate": "2020-03-14",
+                                "quantity": "1",
+                                "serviceItem": {
+                                    "serviceId": "BASE-ULTIMATE-201811",
+                                    "description": "125+ channels",
+                                    "friendlyName": "ULTIMATE",
+                                    "basicService": true,
+                                    "typeOfPlan": "Basic Service"
+                                },
+                                "contractPrice": "135.00",
+                                "rateType": "Contract Selling Price"
+                            },
+                            {
+                                "itemName": "Ultimate",
+                                "description": "ULTIMATE ($55.01 off for 12 mos. $135/mo. (or active rate) in mo. 13.) ",
+                                "retailPrice": "135.00",
+                                "priceCharged": "-55.01",
+                                "taxCharged": "0.00",
+                                "fromDate": "2020-02-14",
+                                "toDate": "2020-03-14",
+                                "quantity": "1",
+                                "serviceItem": {
+                                    "serviceId": "BASE-ULTIMATE-201811",
+                                    "description": "125+ channels",
+                                    "friendlyName": "ULTIMATE",
+                                    "basicService": true,
+                                    "typeOfPlan": "Basic Service"
+                                },
+                                "contractPrice": "135.00",
+                                "rateType": "Contract Selling Price"
+                            },
+                            {
+                                "itemName": "TIER3",
+                                "description": "Regional Sports Fee",
+                                "retailPrice": "0.00",
+                                "priceCharged": "5.37",
+                                "taxCharged": "0.40",
+                                "fromDate": "2020-02-14",
+                                "toDate": "2020-03-14",
+                                "quantity": "1",
+                                "serviceItem": {
+                                    "serviceId": "RSN-TIER3-201812",
+                                    "description": "RSN Fee",
+                                    "friendlyName": "Regional Sports Fee",
+                                    "basicService": false,
+                                    "typeOfPlan": "RSN"
+                                },
+                                "contractPrice": "5.37",
+                                "rateType": "Contract Selling Price"
+                            },
+                            {
+                                "itemName": "3rd Stream Free",
+                                "description": "3 Streams",
+                                "retailPrice": "0.00",
+                                "priceCharged": "0.00",
+                                "taxCharged": "0.00",
+                                "fromDate": "2020-02-14",
+                                "toDate": "2020-03-14",
+                                "quantity": "1",
+                                "serviceItem": {
+                                    "serviceId": "BOLT-3RDSTREAMFREE-201804",
+                                    "description": "Watch TV on any 3 devices at the same time.",
+                                    "friendlyName": "3 Streams",
+                                    "basicService": false,
+                                    "typeOfPlan": "Bolt-on"
+                                },
+                                "rateType": "Contract Selling Price"
+                            },
+                            {
+                                "itemName": "CDVR500FREE",
+                                "description": "500 hours Cloud DVR",
+                                "retailPrice": "0.00",
+                                "priceCharged": "0.00",
+                                "taxCharged": "0.00",
+                                "fromDate": "2020-02-14",
+                                "toDate": "2020-03-14",
+                                "quantity": "1",
+                                "serviceItem": {
+                                    "serviceId": "BOLT-CDVR500FREE-201812",
+                                    "description": "Save your recordings for 90 days.",
+                                    "friendlyName": "500 hours Cloud DVR",
+                                    "basicService": false,
+                                    "typeOfPlan": "Bolt-on"
+                                },
+                                "rateType": "Contract Selling Price"
+                            },
+                            {
+                                "itemName": "CINEMAX",
+                                "description": "CINEMAX ($4 off Cinemax for 3 months) ",
+                                "retailPrice": "11.00",
+                                "priceCharged": "-4.00",
+                                "taxCharged": "0.00",
+                                "fromDate": "2020-02-14",
+                                "toDate": "2020-03-14",
+                                "quantity": "1",
+                                "serviceItem": {
+                                    "serviceId": "BOLT-CINEMAX-201610",
+                                    "description": "<p>Hit movies every week. Bold, supercharged shows.</p>   <ul>\t   <li>Thrilling movies every week</li>     <li>Action-packed shows</li>     <li>Every episode, of every season</li>   </ul>   <p>Includes</p>\t <ul>\t  <li>Action MAX<sup>&#174;</sup></li>\t   <li>Cinemax<sup>&#174;</sup>East</li>     <li>On Demand Library</li>   </ul>",
+                                    "friendlyName": "CINEMAX",
+                                    "basicService": false,
+                                    "typeOfPlan": "Bolt-on"
+                                },
+                                "contractPrice": "11.00",
+                                "rateType": "Contract Selling Price"
+                            },
+                            {
+                                "itemName": "CINEMAX",
+                                "description": "CINEMAX",
+                                "retailPrice": "11.00",
+                                "priceCharged": "11.00",
+                                "taxCharged": "0.53",
+                                "fromDate": "2020-02-14",
+                                "toDate": "2020-03-14",
+                                "quantity": "1",
+                                "serviceItem": {
+                                    "serviceId": "BOLT-CINEMAX-201610",
+                                    "description": "<p>Hit movies every week. Bold, supercharged shows.</p>   <ul>\t   <li>Thrilling movies every week</li>     <li>Action-packed shows</li>     <li>Every episode, of every season</li>   </ul>   <p>Includes</p>\t <ul>\t  <li>Action MAX<sup>&#174;</sup></li>\t   <li>Cinemax<sup>&#174;</sup>East</li>     <li>On Demand Library</li>   </ul>",
+                                    "friendlyName": "CINEMAX",
+                                    "basicService": false,
+                                    "typeOfPlan": "Bolt-on"
+                                },
+                                "contractPrice": "11.00",
+                                "rateType": "Contract Selling Price"
+                            }
+                        ]
+                    },
+                    "isEtfPayment": false
+                }
+            },
+            {
+                "date": "1581724800000",
+                "dateUTC": "2020-02-14T19:00:00.000Z",
+                "category": "invoice",
+                "id": "15034703",
+                "status": "Paid",
+                "amount": "99.29",
+                "invoiceDetail": {
+                    "currentState": "Closed",
+                    "beginningBalance": "99.29",
+                    "totalPayments": "99.29",
+                    "totalAdjustments": "0.00",
+                    "totalProductCharges": "92.36",
+                    "totalTaxes": "6.93",
+                    "orderItems": [
+                        {
+                            "itemName": "Ultimate",
+                            "description": "ULTIMATE",
+                            "retailPrice": "135.00",
+                            "priceCharged": "135.00",
+                            "taxCharged": "6.00",
+                            "fromDate": "2020-02-14",
+                            "toDate": "2020-03-14",
+                            "quantity": "1",
+                            "serviceItem": {
+                                "serviceId": "BASE-ULTIMATE-201811",
+                                "description": "125+ channels",
+                                "friendlyName": "ULTIMATE",
+                                "basicService": true,
+                                "typeOfPlan": "Basic Service"
+                            },
+                            "contractPrice": "135.00",
+                            "rateType": "Contract Selling Price"
+                        },
+                        {
+                            "itemName": "Ultimate",
+                            "description": "ULTIMATE ($55.01 off for 12 mos. $135/mo. (or active rate) in mo. 13.) ",
+                            "retailPrice": "135.00",
+                            "priceCharged": "-55.01",
+                            "taxCharged": "0.00",
+                            "fromDate": "2020-02-14",
+                            "toDate": "2020-03-14",
+                            "quantity": "1",
+                            "serviceItem": {
+                                "serviceId": "BASE-ULTIMATE-201811",
+                                "description": "125+ channels",
+                                "friendlyName": "ULTIMATE",
+                                "basicService": true,
+                                "typeOfPlan": "Basic Service"
+                            },
+                            "promotions": [
+                                {
+                                    "promotionName": "$55.01/mo. off base pkg. for 12 mos.",
+                                    "type": "Promotion",
+                                    "description": "PULT12MCON",
+                                    "promotionId": "PULT12MCON"
+                                }
+                            ],
+                            "contractPrice": "135.00",
+                            "rateType": "Contract Selling Price"
+                        },
+                        {
+                            "itemName": "TIER3",
+                            "description": "Regional Sports Fee",
+                            "retailPrice": "0.00",
+                            "priceCharged": "5.37",
+                            "taxCharged": "0.40",
+                            "fromDate": "2020-02-14",
+                            "toDate": "2020-03-14",
+                            "quantity": "1",
+                            "serviceItem": {
+                                "serviceId": "RSN-TIER3-201812",
+                                "description": "RSN Fee",
+                                "friendlyName": "Regional Sports Fee",
+                                "basicService": false,
+                                "typeOfPlan": "RSN"
+                            },
+                            "contractPrice": "5.37",
+                            "rateType": "Contract Selling Price"
+                        },
+                        {
+                            "itemName": "3rd Stream Free",
+                            "description": "3 Streams",
+                            "retailPrice": "0.00",
+                            "priceCharged": "0.00",
+                            "taxCharged": "0.00",
+                            "fromDate": "2020-02-14",
+                            "toDate": "2020-03-14",
+                            "quantity": "1",
+                            "serviceItem": {
+                                "serviceId": "BOLT-3RDSTREAMFREE-201804",
+                                "description": "Watch TV on any 3 devices at the same time.",
+                                "friendlyName": "3 Streams",
+                                "basicService": false,
+                                "typeOfPlan": "Bolt-on"
+                            },
+                            "rateType": "Contract Selling Price"
+                        },
+                        {
+                            "itemName": "CDVR500FREE",
+                            "description": "500 hours Cloud DVR",
+                            "retailPrice": "0.00",
+                            "priceCharged": "0.00",
+                            "taxCharged": "0.00",
+                            "fromDate": "2020-02-14",
+                            "toDate": "2020-03-14",
+                            "quantity": "1",
+                            "serviceItem": {
+                                "serviceId": "BOLT-CDVR500FREE-201812",
+                                "description": "Save your recordings for 90 days.",
+                                "friendlyName": "500 hours Cloud DVR",
+                                "basicService": false,
+                                "typeOfPlan": "Bolt-on"
+                            },
+                            "rateType": "Contract Selling Price"
+                        },
+                        {
+                            "itemName": "CINEMAX",
+                            "description": "CINEMAX ($4 off Cinemax for 3 months) ",
+                            "retailPrice": "11.00",
+                            "priceCharged": "-4.00",
+                            "taxCharged": "0.00",
+                            "fromDate": "2020-02-14",
+                            "toDate": "2020-03-14",
+                            "quantity": "1",
+                            "serviceItem": {
+                                "serviceId": "BOLT-CINEMAX-201610",
+                                "description": "<p>Hit movies every week. Bold, supercharged shows.</p>   <ul>\t   <li>Thrilling movies every week</li>     <li>Action-packed shows</li>     <li>Every episode, of every season</li>   </ul>   <p>Includes</p>\t <ul>\t  <li>Action MAX<sup>&#174;</sup></li>\t   <li>Cinemax<sup>&#174;</sup>East</li>     <li>On Demand Library</li>   </ul>",
+                                "friendlyName": "CINEMAX",
+                                "basicService": false,
+                                "typeOfPlan": "Bolt-on"
+                            },
+                            "promotions": [
+                                {
+                                    "promotionName": "$4/mo. off Cinemax for 3 mos.",
+                                    "type": "Promotion",
+                                    "description": "$4OFCINMX3M",
+                                    "promotionId": "$4OFCINMX3M"
+                                }
+                            ],
+                            "contractPrice": "11.00",
+                            "rateType": "Contract Selling Price"
+                        },
+                        {
+                            "itemName": "CINEMAX",
+                            "description": "CINEMAX",
+                            "retailPrice": "11.00",
+                            "priceCharged": "11.00",
+                            "taxCharged": "0.53",
+                            "fromDate": "2020-02-14",
+                            "toDate": "2020-03-14",
+                            "quantity": "1",
+                            "serviceItem": {
+                                "serviceId": "BOLT-CINEMAX-201610",
+                                "description": "<p>Hit movies every week. Bold, supercharged shows.</p>   <ul>\t   <li>Thrilling movies every week</li>     <li>Action-packed shows</li>     <li>Every episode, of every season</li>   </ul>   <p>Includes</p>\t <ul>\t  <li>Action MAX<sup>&#174;</sup></li>\t   <li>Cinemax<sup>&#174;</sup>East</li>     <li>On Demand Library</li>   </ul>",
+                                "friendlyName": "CINEMAX",
+                                "basicService": false,
+                                "typeOfPlan": "Bolt-on"
+                            },
+                            "contractPrice": "11.00",
+                            "rateType": "Contract Selling Price"
+                        }
+                    ]
+                }
+            },
+            {
+                "date": "1579265179000",
+                "dateUTC": "2020-01-17T07:46:19.000Z",
+                "category": "payment",
+                "id": "15012721",
+                "type": "Renewal",
+                "status": "Posted",
+                "amount": "99.29",
+                "paymentDetail": {
+                    "forInvoice": "14624781",
+                    "response": "This transaction has been approved.",
+                    "totalPriceCharged": "103.01",
+                    "totalTaxes": "7.73",
+                    "totalAdjustments": "0.00",
+                    "paymentMethodItem": {
+                        "paymentMethod": "Credit/Debit Card",
+                        "cardType": "MasterCard",
+                        "cardNumber": "XXXXXXXXXXXX6100",
+                        "cardExpDate": "12/2021"
+                    },
+                    "invoiceDetail": {
+                        "currentState": "Closed",
+                        "beginningBalance": "91.76",
+                        "totalPayments": "103.21",
+                        "totalAdjustments": "0.00",
+                        "totalProductCharges": "103.01",
+                        "totalTaxes": "7.73",
+                        "orderItems": [
+                            {
+                                "itemName": "Ultimate",
+                                "description": "ULTIMATE ($55.01 off for 12 mos. $135/mo. (or active rate) in mo. 13.) ",
+                                "retailPrice": "135.00",
+                                "priceCharged": "-55.01",
+                                "taxCharged": "0.00",
+                                "fromDate": "2020-01-14",
+                                "toDate": "2020-02-14",
+                                "quantity": "1",
+                                "serviceItem": {
+                                    "serviceId": "BASE-ULTIMATE-201811",
+                                    "description": "125+ channels",
+                                    "friendlyName": "ULTIMATE",
+                                    "basicService": true,
+                                    "typeOfPlan": "Basic Service"
+                                },
+                                "contractPrice": "135.00",
+                                "rateType": "Contract Selling Price"
+                            },
+                            {
+                                "itemName": "Ultimate",
+                                "description": "ULTIMATE",
+                                "retailPrice": "135.00",
+                                "priceCharged": "135.00",
+                                "taxCharged": "6.00",
+                                "fromDate": "2020-01-14",
+                                "toDate": "2020-02-14",
+                                "quantity": "1",
+                                "serviceItem": {
+                                    "serviceId": "BASE-ULTIMATE-201811",
+                                    "description": "125+ channels",
+                                    "friendlyName": "ULTIMATE",
+                                    "basicService": true,
+                                    "typeOfPlan": "Basic Service"
+                                },
+                                "contractPrice": "135.00",
+                                "rateType": "Contract Selling Price"
+                            },
+                            {
+                                "itemName": "TIER3",
+                                "description": "Regional Sports Fee",
+                                "retailPrice": "0.00",
+                                "priceCharged": "5.37",
+                                "taxCharged": "0.40",
+                                "fromDate": "2020-01-14",
+                                "toDate": "2020-02-14",
+                                "quantity": "1",
+                                "serviceItem": {
+                                    "serviceId": "RSN-TIER3-201812",
+                                    "description": "RSN Fee",
+                                    "friendlyName": "Regional Sports Fee",
+                                    "basicService": false,
+                                    "typeOfPlan": "RSN"
+                                },
+                                "contractPrice": "5.37",
+                                "rateType": "Contract Selling Price"
+                            },
+                            {
+                                "itemName": "3rd Stream Free",
+                                "description": "3 Streams",
+                                "retailPrice": "0.00",
+                                "priceCharged": "0.00",
+                                "taxCharged": "0.00",
+                                "fromDate": "2020-01-14",
+                                "toDate": "2020-02-14",
+                                "quantity": "1",
+                                "serviceItem": {
+                                    "serviceId": "BOLT-3RDSTREAMFREE-201804",
+                                    "description": "Watch TV on any 3 devices at the same time.",
+                                    "friendlyName": "3 Streams",
+                                    "basicService": false,
+                                    "typeOfPlan": "Bolt-on"
+                                },
+                                "rateType": "Contract Selling Price"
+                            },
+                            {
+                                "itemName": "CDVR500FREE",
+                                "description": "500 hours Cloud DVR",
+                                "retailPrice": "0.00",
+                                "priceCharged": "0.00",
+                                "taxCharged": "0.00",
+                                "fromDate": "2020-01-14",
+                                "toDate": "2020-02-14",
+                                "quantity": "1",
+                                "serviceItem": {
+                                    "serviceId": "BOLT-CDVR500FREE-201812",
+                                    "description": "Save your recordings for 90 days.",
+                                    "friendlyName": "500 hours Cloud DVR",
+                                    "basicService": false,
+                                    "typeOfPlan": "Bolt-on"
+                                },
+                                "rateType": "Contract Selling Price"
+                            },
+                            {
+                                "itemName": "CINEMAX",
+                                "description": "CINEMAX ($4 off Cinemax for 3 months) ",
+                                "retailPrice": "11.00",
+                                "priceCharged": "-4.00",
+                                "taxCharged": "0.00",
+                                "fromDate": "2020-01-14",
+                                "toDate": "2020-02-14",
+                                "quantity": "1",
+                                "serviceItem": {
+                                    "serviceId": "BOLT-CINEMAX-201610",
+                                    "description": "<p>Hit movies every week. Bold, supercharged shows.</p>   <ul>\t   <li>Thrilling movies every week</li>     <li>Action-packed shows</li>     <li>Every episode, of every season</li>   </ul>   <p>Includes</p>\t <ul>\t  <li>Action MAX<sup>&#174;</sup></li>\t   <li>Cinemax<sup>&#174;</sup>East</li>     <li>On Demand Library</li>   </ul>",
+                                    "friendlyName": "CINEMAX",
+                                    "basicService": false,
+                                    "typeOfPlan": "Bolt-on"
+                                },
+                                "contractPrice": "11.00",
+                                "rateType": "Contract Selling Price"
+                            },
+                            {
+                                "itemName": "CINEMAX",
+                                "description": "CINEMAX",
+                                "retailPrice": "11.00",
+                                "priceCharged": "10.65",
+                                "taxCharged": "0.80",
+                                "fromDate": "2019-12-15",
+                                "toDate": "2020-01-14",
+                                "quantity": "1",
+                                "isProrated": true,
+                                "serviceItem": {
+                                    "serviceId": "BOLT-CINEMAX-201610",
+                                    "description": "<p>Hit movies every week. Bold, supercharged shows.</p>   <ul>\t   <li>Thrilling movies every week</li>     <li>Action-packed shows</li>     <li>Every episode, of every season</li>   </ul>   <p>Includes</p>\t <ul>\t  <li>Action MAX<sup>&#174;</sup></li>\t   <li>Cinemax<sup>&#174;</sup>East</li>     <li>On Demand Library</li>   </ul>",
+                                    "friendlyName": "CINEMAX",
+                                    "basicService": false,
+                                    "typeOfPlan": "Bolt-on"
+                                },
+                                "contractPrice": "11.00",
+                                "rateType": "Contract Selling Price"
+                            },
+                            {
+                                "itemName": "CINEMAX",
+                                "description": "CINEMAX",
+                                "retailPrice": "11.00",
+                                "priceCharged": "11.00",
+                                "taxCharged": "0.53",
+                                "fromDate": "2020-01-14",
+                                "toDate": "2020-02-14",
+                                "quantity": "1",
+                                "serviceItem": {
+                                    "serviceId": "BOLT-CINEMAX-201610",
+                                    "description": "<p>Hit movies every week. Bold, supercharged shows.</p>   <ul>\t   <li>Thrilling movies every week</li>     <li>Action-packed shows</li>     <li>Every episode, of every season</li>   </ul>   <p>Includes</p>\t <ul>\t  <li>Action MAX<sup>&#174;</sup></li>\t   <li>Cinemax<sup>&#174;</sup>East</li>     <li>On Demand Library</li>   </ul>",
+                                    "friendlyName": "CINEMAX",
+                                    "basicService": false,
+                                    "typeOfPlan": "Bolt-on"
+                                },
+                                "contractPrice": "11.00",
+                                "rateType": "Contract Selling Price"
+                            }
+                        ]
+                    },
+                    "isEtfPayment": false
+                }
+            },
+            {
+                "date": "1579046400000",
+                "dateUTC": "2020-01-14T19:00:00.000Z",
+                "category": "invoice",
+                "id": "14624781",
+                "status": "Paid",
+                "amount": "99.29",
+                "invoiceDetail": {
+                    "currentState": "Closed",
+                    "beginningBalance": "91.76",
+                    "totalPayments": "103.21",
+                    "totalAdjustments": "0.00",
+                    "totalProductCharges": "103.01",
+                    "totalTaxes": "7.73",
+                    "orderItems": [
+                        {
+                            "itemName": "Ultimate",
+                            "description": "ULTIMATE ($55.01 off for 12 mos. $135/mo. (or active rate) in mo. 13.) ",
+                            "retailPrice": "135.00",
+                            "priceCharged": "-55.01",
+                            "taxCharged": "0.00",
+                            "fromDate": "2020-01-14",
+                            "toDate": "2020-02-14",
+                            "quantity": "1",
+                            "serviceItem": {
+                                "serviceId": "BASE-ULTIMATE-201811",
+                                "description": "125+ channels",
+                                "friendlyName": "ULTIMATE",
+                                "basicService": true,
+                                "typeOfPlan": "Basic Service"
+                            },
+                            "promotions": [
+                                {
+                                    "promotionName": "$55.01/mo. off base pkg. for 12 mos.",
+                                    "type": "Promotion",
+                                    "description": "PULT12MCON",
+                                    "promotionId": "PULT12MCON"
+                                }
+                            ],
+                            "contractPrice": "135.00",
+                            "rateType": "Contract Selling Price"
+                        },
+                        {
+                            "itemName": "Ultimate",
+                            "description": "ULTIMATE",
+                            "retailPrice": "135.00",
+                            "priceCharged": "135.00",
+                            "taxCharged": "6.00",
+                            "fromDate": "2020-01-14",
+                            "toDate": "2020-02-14",
+                            "quantity": "1",
+                            "serviceItem": {
+                                "serviceId": "BASE-ULTIMATE-201811",
+                                "description": "125+ channels",
+                                "friendlyName": "ULTIMATE",
+                                "basicService": true,
+                                "typeOfPlan": "Basic Service"
+                            },
+                            "contractPrice": "135.00",
+                            "rateType": "Contract Selling Price"
+                        },
+                        {
+                            "itemName": "TIER3",
+                            "description": "Regional Sports Fee",
+                            "retailPrice": "0.00",
+                            "priceCharged": "5.37",
+                            "taxCharged": "0.40",
+                            "fromDate": "2020-01-14",
+                            "toDate": "2020-02-14",
+                            "quantity": "1",
+                            "serviceItem": {
+                                "serviceId": "RSN-TIER3-201812",
+                                "description": "RSN Fee",
+                                "friendlyName": "Regional Sports Fee",
+                                "basicService": false,
+                                "typeOfPlan": "RSN"
+                            },
+                            "contractPrice": "5.37",
+                            "rateType": "Contract Selling Price"
+                        },
+                        {
+                            "itemName": "3rd Stream Free",
+                            "description": "3 Streams",
+                            "retailPrice": "0.00",
+                            "priceCharged": "0.00",
+                            "taxCharged": "0.00",
+                            "fromDate": "2020-01-14",
+                            "toDate": "2020-02-14",
+                            "quantity": "1",
+                            "serviceItem": {
+                                "serviceId": "BOLT-3RDSTREAMFREE-201804",
+                                "description": "Watch TV on any 3 devices at the same time.",
+                                "friendlyName": "3 Streams",
+                                "basicService": false,
+                                "typeOfPlan": "Bolt-on"
+                            },
+                            "rateType": "Contract Selling Price"
+                        },
+                        {
+                            "itemName": "CDVR500FREE",
+                            "description": "500 hours Cloud DVR",
+                            "retailPrice": "0.00",
+                            "priceCharged": "0.00",
+                            "taxCharged": "0.00",
+                            "fromDate": "2020-01-14",
+                            "toDate": "2020-02-14",
+                            "quantity": "1",
+                            "serviceItem": {
+                                "serviceId": "BOLT-CDVR500FREE-201812",
+                                "description": "Save your recordings for 90 days.",
+                                "friendlyName": "500 hours Cloud DVR",
+                                "basicService": false,
+                                "typeOfPlan": "Bolt-on"
+                            },
+                            "rateType": "Contract Selling Price"
+                        },
+                        {
+                            "itemName": "CINEMAX",
+                            "description": "CINEMAX ($4 off Cinemax for 3 months) ",
+                            "retailPrice": "11.00",
+                            "priceCharged": "-4.00",
+                            "taxCharged": "0.00",
+                            "fromDate": "2020-01-14",
+                            "toDate": "2020-02-14",
+                            "quantity": "1",
+                            "serviceItem": {
+                                "serviceId": "BOLT-CINEMAX-201610",
+                                "description": "<p>Hit movies every week. Bold, supercharged shows.</p>   <ul>\t   <li>Thrilling movies every week</li>     <li>Action-packed shows</li>     <li>Every episode, of every season</li>   </ul>   <p>Includes</p>\t <ul>\t  <li>Action MAX<sup>&#174;</sup></li>\t   <li>Cinemax<sup>&#174;</sup>East</li>     <li>On Demand Library</li>   </ul>",
+                                "friendlyName": "CINEMAX",
+                                "basicService": false,
+                                "typeOfPlan": "Bolt-on"
+                            },
+                            "promotions": [
+                                {
+                                    "promotionName": "$4/mo. off Cinemax for 3 mos.",
+                                    "type": "Promotion",
+                                    "description": "$4OFCINMX3M",
+                                    "promotionId": "$4OFCINMX3M"
+                                }
+                            ],
+                            "contractPrice": "11.00",
+                            "rateType": "Contract Selling Price"
+                        },
+                        {
+                            "itemName": "CINEMAX",
+                            "description": "CINEMAX",
+                            "retailPrice": "11.00",
+                            "priceCharged": "10.65",
+                            "taxCharged": "0.80",
+                            "fromDate": "2019-12-15",
+                            "toDate": "2020-01-14",
+                            "quantity": "1",
+                            "isProrated": true,
+                            "serviceItem": {
+                                "serviceId": "BOLT-CINEMAX-201610",
+                                "description": "<p>Hit movies every week. Bold, supercharged shows.</p>   <ul>\t   <li>Thrilling movies every week</li>     <li>Action-packed shows</li>     <li>Every episode, of every season</li>   </ul>   <p>Includes</p>\t <ul>\t  <li>Action MAX<sup>&#174;</sup></li>\t   <li>Cinemax<sup>&#174;</sup>East</li>     <li>On Demand Library</li>   </ul>",
+                                "friendlyName": "CINEMAX",
+                                "basicService": false,
+                                "typeOfPlan": "Bolt-on"
+                            },
+                            "contractPrice": "11.00",
+                            "rateType": "Contract Selling Price"
+                        },
+                        {
+                            "itemName": "CINEMAX",
+                            "description": "CINEMAX",
+                            "retailPrice": "11.00",
+                            "priceCharged": "11.00",
+                            "taxCharged": "0.53",
+                            "fromDate": "2020-01-14",
+                            "toDate": "2020-02-14",
+                            "quantity": "1",
+                            "serviceItem": {
+                                "serviceId": "BOLT-CINEMAX-201610",
+                                "description": "<p>Hit movies every week. Bold, supercharged shows.</p>   <ul>\t   <li>Thrilling movies every week</li>     <li>Action-packed shows</li>     <li>Every episode, of every season</li>   </ul>   <p>Includes</p>\t <ul>\t  <li>Action MAX<sup>&#174;</sup></li>\t   <li>Cinemax<sup>&#174;</sup>East</li>     <li>On Demand Library</li>   </ul>",
+                                "friendlyName": "CINEMAX",
+                                "basicService": false,
+                                "typeOfPlan": "Bolt-on"
+                            },
+                            "contractPrice": "11.00",
+                            "rateType": "Contract Selling Price"
+                        }
+                    ]
+                }
+            },
+            {
+                "date": "1578704751000",
+                "dateUTC": "2020-01-10T20:05:51.000Z",
+                "category": "offer",
+                "amount": "4.00",
+                "offersDetail": {
+                    "promotionId": "$4OFCINMX3M",
+                    "startDate": "2020-01-14",
+                    "endDate": "2020-04-14",
+                    "promotionName": "$4 off Cinemax for 3 months",
+                    "promotionType": "Flat Off",
+                    "promotionStatus": "Active",
+                    "promotionPeriod": "NoOfMonths",
+                    "promotionDuration": "3.0",
+                    "orderItems": [
+                        {
+                            "orderProductId": "5359924",
+                            "fromDate": "2019-12-12",
+                            "serviceItem": {
+                                "serviceId": "BOLT-CINEMAX-201610",
+                                "description": "",
+                                "friendlyName": "BOLT-CINEMAX-201610",
+                                "basicService": false
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}
+            
+            
+              
+  ]
+        
+    
+}

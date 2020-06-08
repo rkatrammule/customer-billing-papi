@@ -1,0 +1,8 @@
+{
+    "content": {
+        "pdfReturned": false,
+        "ContentType": "application/PDF",
+        "SOR": "BriteBill",
+        "ErrorCode": "MSBILL_BB100"
+    }
+}

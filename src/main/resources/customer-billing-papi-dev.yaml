@@ -1,0 +1,21 @@
+#General Properties 
+api:
+  id: "1234567"
+  
+http:
+  host: "localhost"
+  port: "8081"
+
+#The backend AT&T Micro Service Details  
+billingMicroservice:
+  http:     
+    host : "apporigin-idp-test2.bhdc.att.com"
+    port : "8443"
+    basePath : "/msapi/billms/v1/billdata"    
+    reconAttempts: "3"
+    reconFrequency: "20000"
+    maxConnections: "10"
+    connTimeout: "120000"
+    billCycleHistoryPath: "/getbillcyclehistory/{ban}/{biller}"
+    billDetailsPath: "/getbilldata/{statementID}"
+    billPdfPath: "/getpdf/{statementID}"

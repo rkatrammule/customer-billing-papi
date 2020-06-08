@@ -1,0 +1,20 @@
+[
+		{
+		"product": "Wireless",
+		"ban": "12345678",
+		"endDate": "12/05/2020",  
+		"startDate": "12/05/2020"  
+	},
+	{
+		"product": "Wireline",
+		"ban": "2124523",
+		"startDate": "12/05/2020",
+		"endDate": "12/05/2020"  
+	},
+	{  
+		"product": "OTT",
+		"ban": "87878",
+		"startDate": "12/05/2020",
+		"endDate": "12/05/2020" 
+	}
+]
