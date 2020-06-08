@@ -1,0 +1,112 @@
+{
+  "content": {
+    "responseCode": "1",
+    "message": "SUCCESS",
+    "billRunDate": "1592179200000",
+    "totalBasicServiceChargedPrice": "79.99",
+    "totalNonBasicServiceChargedPrice": "11.00",
+    "totalStandAloneChargedPrice": "0.00",
+    "totalRsnChargedPrice": "5.37",
+    "totalEquipmentChargedPrice": "0.00",
+    "totalAdjustments": "0.00",
+    "totalMonthlyChargedPrice": "96.36",
+    "packageDetails": [
+      {
+        "serviceId": "BASE-ULTIMATE-201811",
+        "displayName": "ULTIMATE",
+        "startDate": "1592179200000",
+        "chargedPrice": "79.99",
+        "retailPrice": "135.00",
+        "promotion": [
+          {
+            "name": "$55.01/mo. off base pkg. for 12 mos.",
+            "description": "PULT12MCON",
+            "amount": "79.99",
+            "startDate": "1576368000000",
+            "endDate": "1607990400000",
+            "type": "Flat Off",
+            "promotionId": "PULT12MCON",
+            "discountType": "Promotion",
+            "externalPromoType": "Contract",
+            "offerAmount": "55.01",
+            "customerClassification": "NewCustomer"
+          }
+        ],
+        "categoryType": "Basic Service",
+        "typeOfPlan": "Basic Service",
+        "contractPrice": "135.00",
+        "rateType": "Contract Selling Price",
+        "orderProductId": "5345720",
+        "quantity": "1",
+        "numberOfChannels": "125+ live channels",
+        "externalOrderID": "23-299832620253340",
+        "allowedRefundDate": "1576368000000",
+        "maxAllowedRefundDate": "-1"
+      }
+    ],
+    "addOns": [
+      {
+        "serviceId": "BOLT-CINEMAX-201610",
+        "displayName": "CINEMAX",
+        "startDate": "1592179200000",
+        "chargedPrice": "11.00",
+        "retailPrice": "11.00",
+        "categoryType": "Subscription",
+        "typeOfPlan": "Bolt-on",
+        "contractPrice": "11.00",
+        "rateType": "Contract Selling Price",
+        "orderProductId": "5359924",
+        "quantity": "1",
+        "allowedRefundDate": "-1",
+        "maxAllowedRefundDate": "-1"
+      },
+      {
+        "serviceId": "BOLT-3RDSTREAMFREE-201804",
+        "displayName": "3 Streams",
+        "startDate": "1592179200000",
+        "chargedPrice": "0.00",
+        "categoryType": "Concurrent Streams",
+        "typeOfPlan": "Bolt-on",
+        "rateType": "Contract Selling Price",
+        "orderProductId": "5345716",
+        "quantity": "1",
+        "externalOrderID": "23-299832620253340",
+        "allowedRefundDate": "1576368000000",
+        "maxAllowedRefundDate": "-1"
+      },
+      {
+        "serviceId": "BOLT-CDVR500FREE-201812",
+        "displayName": "500 hours Cloud DVR",
+        "startDate": "1592179200000",
+        "chargedPrice": "0.00",
+        "categoryType": "DVR",
+        "typeOfPlan": "Bolt-on",
+        "rateType": "Contract Selling Price",
+        "orderProductId": "5345718",
+        "quantity": "1",
+        "externalOrderID": "23-299832620253340",
+        "allowedRefundDate": "1576368000000",
+        "maxAllowedRefundDate": "-1"
+      }
+    ],
+    "rsnDetails": [
+      {
+        "serviceId": "RSN-TIER3-201812",
+        "displayName": "Regional Sports Fee",
+        "startDate": "1592179200000",
+        "chargedPrice": "5.37",
+        "retailPrice": "5.37",
+        "typeOfPlan": "RSN",
+        "contractPrice": "5.37",
+        "rateType": "Contract Selling Price",
+        "orderProductId": "5345717",
+        "quantity": "1",
+        "externalOrderID": "23-299832620253340",
+        "allowedRefundDate": "1576368000000",
+        "maxAllowedRefundDate": "-1"
+      }
+    ],
+    "pendingServiceCancellation": false,
+    "isProjectedBillDate": false
+  }
+}

@@ -6,16 +6,30 @@ http:
   host: "localhost"
   port: "8081"
 
-#The backend AT&T Micro Service Details  
-billingMicroservice:
+#The Mule System API Details for Billing
+billingSystemAPI:
   http:     
-    host : "apporigin-idp-test2.bhdc.att.com"
+    host : "customer-billing-billingdata-sapi.us-e2.cloudhub.io"
     port : "8443"
-    basePath : "/msapi/billms/v1/billdata"    
+    basePath : "/api"    
     reconAttempts: "3"
     reconFrequency: "20000"
     maxConnections: "10"
     connTimeout: "120000"
-    billCycleHistoryPath: "/getbillcyclehistory/{ban}/{biller}"
-    billDetailsPath: "/getbilldata/{statementID}"
-    billPdfPath: "/getpdf/{statementID}"
+    billCycleHistoryPath: "billing/accounts/{ban}/systems/{billerId}/history"
+    billDetailsPath: "/billing/statements/{statementId}/details"
+    billPdfPath: "/billing/statements/{statementId}pdf"
+
+
+#The Mule System API Details for Payment
+paymentSystemAPI:
+  http:     
+    host : "customer-billing-billingdata-sapi.us-e2.cloudhub.io"
+    port : "8443"
+    basePath : "/api"    
+    reconAttempts: "3"
+    reconFrequency: "20000"
+    maxConnections: "10"
+    connTimeout: "120000"
+    nextSubscriptionChargesPath: "/payment/nextSubscriptionCharges/{ban}"
+    accountHistoryPath: "/payment/accountHistory/{ban}"    

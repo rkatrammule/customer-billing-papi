@@ -1,51 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns="http://www.mulesoft.org/schema/mule/core"
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
 	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
-http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
-	<flow name="retrieve-bill-summary-details-flow" doc:id="55239246-9c01-432e-99c4-702e018acaf8" >
-		<scatter-gather doc:name="Scatter-Gather" doc:id="2cb4f040-b39a-4340-abc9-b55cfcd9ef2b" >
-			<route >
-				<ee:transform doc:name="Transform Message" doc:id="3b688f1f-d12a-461b-bcbe-32662985aefa" >
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<flow name="retrieve-bill-summary-details-flow"
+		doc:id="55239246-9c01-432e-99c4-702e018acaf8">
+		<scatter-gather doc:name="Scatter-Gather"
+			doc:id="2cb4f040-b39a-4340-abc9-b55cfcd9ef2b">
+			<route>
+				<set-payload value='#[(payload filter ((item, index) -&gt; item.product == "Wireless"))[0]]' doc:name="to Wireless" doc:id="65f668c6-a2bd-4f55-bbca-cf462789883a" />
+				<flow-ref doc:name="billing-history-sub_Flow" doc:id="2098c5e2-4e16-43f3-a872-2c0c60c7e7bf" name="billing-history-sub_Flow"/>
+				<ee:transform doc:name="Transform Message" doc:id="146a7dca-a6f5-4ab0-88a3-223bebc3bb3b" >
 					<ee:message >
 						<ee:set-payload ><![CDATA[%dw 2.0
 output application/java
 ---
 {
-	product: "Wireless"
 }]]></ee:set-payload>
 					</ee:message>
 				</ee:transform>
 			</route>
-			<route >
-				<ee:transform doc:name="Transform Message" doc:id="46f3b9af-35f3-418a-8f66-0e02e09fb5a9" >
+			<route>
+				<set-payload value='#[(payload filter ((item, index) -&gt; item.product == "Wireline"))[0]]' doc:name="to Wireline" doc:id="0c85a98a-b9d2-418f-aae7-2c6f9c521648" />
+				<flow-ref doc:name="billing-history-sub_Flow" doc:id="49b95077-7344-41fa-882b-dda4426668bd" name="billing-history-sub_Flow"/>
+				<ee:transform doc:name="Transform Message" doc:id="3a247537-4395-46bb-b817-ca015fb4f638" >
+					<ee:message >
+						<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+{
+}]]></ee:set-payload>
+					</ee:message>
+				</ee:transform>
+				<ee:transform doc:name="Transform Message" doc:id="a857ede3-7719-4175-a82b-16309cb6631c" >
 					<ee:message >
 						<ee:set-payload ><![CDATA[%dw 2.0
 output application/java
 ---
 {
-	product: "Wireline"
 }]]></ee:set-payload>
 					</ee:message>
 				</ee:transform>
 			</route>
-			<route >
-				<ee:transform doc:name="Transform Message" doc:id="238063c5-ab73-431c-a644-0eec0f5606f7" >
-					<ee:message >
-						<ee:set-payload ><![CDATA[%dw 2.0
-output application/java
+			<route>
+				<set-payload value='#[(payload filter ((item, index) -&gt; item.product == "OTT"))[0]]' doc:name="to OTT" doc:id="3630a148-9756-4f73-8700-f501c6ff0226" />
+				<http:request method="GET" doc:name="Payment System API getAccountHistory" doc:id="7714bd82-3dd9-44ce-b19c-8cc082c20299" config-ref="HTTPS_Payment_SystemAPI_Request_config" path="${secure::paymentSystemAPI.http.accountHistoryPath}" >
+					<http:query-params ><![CDATA[#[output application/java
 ---
 {
-	product: "OTT"
-}]]></ee:set-payload>
-					</ee:message>
-				</ee:transform>
+	"endDate" : vars.endDate,
+	"startDate" : vars.startDate
+}]]]></http:query-params>
+				</http:request>		
+	
+				
 			</route>
 		</scatter-gather>
-		<ee:transform doc:name="Transform Message" doc:id="9f8462c0-9681-46d7-b7b3-05ca4efedc4e" >
-			<ee:message >
-				<ee:set-payload ><![CDATA[%dw 2.0
+		<ee:transform doc:name="Transform Message"
+			doc:id="9f8462c0-9681-46d7-b7b3-05ca4efedc4e">
+			<ee:message>
+				<ee:set-payload><![CDATA[%dw 2.0
 output application/json
 ---
 {
@@ -56,4 +75,14 @@ output application/json
 			</ee:message>
 		</ee:transform>
 	</flow>
+	<sub-flow name="billing-history-sub_Flow" doc:id="6f2de0e6-ad4c-41b4-aeaa-610cc13549f8" >
+		<http:request method="GET" doc:name="Billing History" doc:id="0d387a4c-9d2f-408a-b3c0-721271223768" config-ref="HTTPS_Billing_SystemAPI_Request_config" path="${secure::billingSystemAPI.http.billDetailsPath}">
+			<http:uri-params><![CDATA[#[output application/java
+---
+{
+	"ban" : vars.ban,
+	"billerId" : vars.billerId
+}]]]></http:uri-params>
+		</http:request>
+	</sub-flow>
 </mule>

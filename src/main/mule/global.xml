@@ -51,20 +51,38 @@ http://www.mulesoft.org/schema/mule/kafka http://www.mulesoft.org/schema/mule/ka
 		doc:name="ATT Mule Application Logger Config"
 		doc:id="791bb1e9-9849-4cc1-a00e-b2ffd1025be7" />
 	<http:request-config
-		name="HTTPS_Billing_MicroService_Request_config"
+		name="HTTPS_Billing_SystemAPI_Request_config"
 		doc:name="HTTPS Request 
 		configuration"
 		doc:id="440de480-7215-4a49-a382-220cc73255e1"
-		basePath="${secure::billingMicroservice.http.basePath}">
+		basePath="${secure::billingSystemAPI.http.basePath}">
 		<http:request-connection
-			host="${secure::billingMicroservice.http.host}"
-			port="${secure::billingMicroservice.http.port}" protocol="HTTPS"
-			maxConnections="${secure::billingMicroservice.http.maxConnections}"
-			connectionIdleTimeout="${secure::billingMicroservice.http.connTimeout}">
+			host="${secure::billingSystemAPI.http.host}"
+			port="${secure::billingSystemAPI.http.port}" protocol="HTTPS"
+			maxConnections="${secure::billingSystemAPI.http.maxConnections}"
+			connectionIdleTimeout="${secure::billingSystemAPI.http.connTimeout}">
 			<reconnection>
 				<reconnect
-					frequency="${secure::billingMicroservice.http.reconFrequency}"
-					count="${secure::billingMicroservice.http.reconAttempts}" />
+					frequency="${secure::billingSystemAPI.http.reconFrequency}"
+					count="${secure::billingSystemAPI.http.reconAttempts}" />
+			</reconnection>
+		</http:request-connection>
+		</http:request-config>
+		<http:request-config
+		name="HTTPS_Payment_SystemAPI_Request_config"
+		doc:name="HTTPS Request 
+		configuration"
+		doc:id="027b6752-7c0c-45fc-944e-73f0af7cc442"
+		basePath="${secure::paymentSystemAPI.http.basePath}">
+		<http:request-connection
+			host="${secure::paymentSystemAPI.http.host}"
+			port="${secure::paymentSystemAPI.http.port}" protocol="HTTPS"
+			maxConnections="${secure::paymentSystemAPI.http.maxConnections}"
+			connectionIdleTimeout="${secure::paymentSystemAPI.http.connTimeout}">
+			<reconnection>
+				<reconnect
+					frequency="${secure::paymentSystemAPI.http.reconFrequency}"
+					count="${secure::paymentSystemAPI.http.reconAttempts}" />
 			</reconnection>
 		</http:request-connection>
 	</http:request-config>

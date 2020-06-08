@@ -2,19 +2,19 @@
 		{
 		"product": "Wireless",
 		"ban": "12345678",
-		"endDate": "12/05/2020",  
-		"startDate": "12/05/2020"  
+		"endDate": "2020-11-27",  
+		"startDate": "2020-12-27"  
 	},
 	{
 		"product": "Wireline",
 		"ban": "2124523",
-		"startDate": "12/05/2020",
-		"endDate": "12/05/2020"  
+		"startDate": "2020-11-27",
+		"endDate": "2020-12-27"  
 	},
 	{  
 		"product": "OTT",
 		"ban": "87878",
-		"startDate": "12/05/2020",
-		"endDate": "12/05/2020" 
+		"startDate": "2020-11-27",
+		"endDate": "2020-12-27" 
 	}
 ]
