@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:munit="http://www.mulesoft.org/schema/mule/munit" xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xsi:schemaLocation="
+		http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
+	<munit:config name="billing-proc-test-suite.xml" />
+	<munit:test name="billing-proc-test-suite-customer-billing-papi-mainTest" doc:id="bb53eb84-ac5c-4b86-ac04-f9d3f991ebda" description="Test">
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to customer-billing-papi-main" doc:id="bb502c2d-afc0-41a9-ba7a-9e9de9815e07" name="customer-billing-papi-main"/>
+		</munit:execution>
+	</munit:test>
+	<munit:test name="billing-proc-test-suite-post:\billing\accounts\summary:application\json:customer-billing-papi-configTest" doc:id="a315692c-d6a4-406c-bc0b-19566c80f064" description="Test">
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to post:\billing\accounts\summary:application\json:customer-billing-papi-config" doc:id="3ff6e0f5-29db-4e32-9ed1-516e9044f964" name="post:\billing\accounts\summary:application\json:customer-billing-papi-config"/>
+		</munit:execution>
+	</munit:test>
+	<munit:test name="billing-proc-test-suite-get:\billing\(productId)\statements\(statementId)\details:customer-billing-papi-configTest" doc:id="6a3cbb2e-49d1-46a3-89b1-76518f634eb4" description="Test">
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to get:\billing\(productId)\statements\(statementId)\details:customer-billing-papi-config" doc:id="3ba3fb42-8af3-49f1-9822-50cd693dedb1" name="get:\billing\(productId)\statements\(statementId)\details:customer-billing-papi-config"/>
+		</munit:execution>
+	</munit:test>
+	<munit:test name="billing-proc-test-suite-get:\billing\(productId)\statements\(statementId)\pdf:customer-billing-papi-configTest" doc:id="e3110c97-d484-4044-8b57-9ffe8b90ff92" description="Test">
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to get:\billing\(productId)\statements\(statementId)\pdf:customer-billing-papi-config" doc:id="fc5c9058-2863-423b-9313-d2651f0efd99" name="get:\billing\(productId)\statements\(statementId)\pdf:customer-billing-papi-config"/>
+		</munit:execution>
+	</munit:test>
+	<munit:test name="billing-proc-test-suite-get:\billing\(productId)\currentBill\(ban):customer-billing-papi-configTest" doc:id="cd65c8cc-c365-4dac-9b50-2b4dd9020f3b" description="Test">
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to get:\billing\(productId)\currentBill\(ban):customer-billing-papi-config" doc:id="b0e8b9ae-a4cf-4b78-ad7b-2fb2c6074319" name="get:\billing\(productId)\currentBill\(ban):customer-billing-papi-config"/>
+		</munit:execution>
+	</munit:test>
+
+
+</mule>
