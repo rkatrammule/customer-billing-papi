@@ -8,7 +8,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
 http://www.mulesoft.org/schema/mule/att-mule-applicationlogger http://www.mulesoft.org/schema/mule/att-mule-applicationlogger/current/mule-att-mule-applicationlogger.xsd">
-	<error-handler>
+	<error-handler name="globalError_Handler">
 		<on-error-propagate type="APIKIT:BAD_REQUEST">
 			<ee:transform
 				xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core"
@@ -101,9 +101,12 @@ output application/json
 				</ee:variables>
 			</ee:transform>
 		</on-error-propagate>
+		<on-error-propagate enableNotifications="true" logException="true" doc:name="On Error Propagate" doc:id="bb55d116-5ce6-4f32-9754-9ced074b22f3" type="ANY">
+			<flow-ref doc:name="build-error-flow" doc:id="0deab41e-0cf3-4831-b5ea-cee716373ecb" name="build-error-flow"/>
+		</on-error-propagate>
 	</error-handler>
-	<flow name="error-handlerFlow"
-		doc:id="77d1c157-d103-4b9c-983b-ddd6df780dbc">
+	<flow name="build-error-flow"
+		doc:id="213ad76e-4ed0-4aca-9c5e-6d50bc92c1e3">
 		<ee:transform
 			xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core"
 			xsi:schemaLocation="http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
@@ -113,14 +116,14 @@ output application/json
 ---
 {
   success: false,
-  apiName: "customer-billing-papi",
+  apiName: "customer-billing-billingdata-sapi",
   version: "v1",
   idpTraceId: "f80c9750-0252-11ea-a538-f606160048e8",
   uuid: "23be1978-a451-11ea-bb37-0242ac130002",
   timestamp: "2020-05-21T13:09:57.714-05:00",
   errorDetails: {
     code: 500,
-    message: "Internal Server Error. There were issues accessing the Billing API",
+    message: error.errorMessage.payload,
     additionalInfo: "Bad Connectivity : There were issues accessing the Billing API."
   }
 }]]></ee:set-payload>

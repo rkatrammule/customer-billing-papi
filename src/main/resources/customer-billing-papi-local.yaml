@@ -9,8 +9,8 @@ http:
 #The Mule System API Details for Billing
 billingSystemAPI:
   http:     
-    host : "customer-billing-billingdata-sapi.us-e2.cloudhub.io"
-    port : "8443"
+    host : "localhost"
+    port : "8083"
     basePath : "/api"    
     reconAttempts: "3"
     reconFrequency: "20000"
@@ -20,14 +20,14 @@ billingSystemAPI:
     billDetailsPath: "/billing/statements/{statementId}/details"
     billPdfPath: "/billing/statements/{statementId}/pdf"
     clientId: "123"
-    clientSecret: "123" 
+    clientSecret: "123"
 
 
 #The Mule System API Details for Payment
 paymentSystemAPI:
   http:     
-    host : "customer-billing-billingdata-sapi.us-e2.cloudhub.io"
-    port : "8443"
+    host : "localhost"
+    port : "8083"
     basePath : "/api"    
     reconAttempts: "3"
     reconFrequency: "20000"
@@ -36,4 +36,4 @@ paymentSystemAPI:
     nextSubscriptionChargesPath: "/payment/nextSubscriptionCharges/{ban}"
     accountHistoryPath: "/payment/accountHistory/{ban}"
     clientId: "123"
-    clientSecret: "123"     
+    clientSecret: "123"    

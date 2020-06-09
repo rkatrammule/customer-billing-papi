@@ -1,82 +1,174 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<mule xmlns:http="http://www.mulesoft.org/schema/mule/http"
+<mule
+	xmlns:validation="http://www.mulesoft.org/schema/mule/validation"
+	xmlns:http="http://www.mulesoft.org/schema/mule/http"
 	xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core"
 	xmlns="http://www.mulesoft.org/schema/mule/core"
 	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
 http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd
-http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/validation http://www.mulesoft.org/schema/mule/validation/current/mule-validation.xsd">
+
+
 	<flow name="retrieve-bill-summary-details-flow"
-		doc:id="55239246-9c01-432e-99c4-702e018acaf8">
+		doc:id="4e914eed-8508-4a82-90ff-26f2d2c5adeb">
 		<scatter-gather doc:name="Scatter-Gather"
-			doc:id="2cb4f040-b39a-4340-abc9-b55cfcd9ef2b">
+			doc:id="5e23eeb2-09ee-4a8d-8f19-a9944f6cd881">
 			<route>
-				<set-payload value='#[(payload filter ((item, index) -&gt; item.product == "Wireless"))[0]]' doc:name="to Wireless" doc:id="65f668c6-a2bd-4f55-bbca-cf462789883a" />
-				<flow-ref doc:name="billing-history-sub_Flow" doc:id="2098c5e2-4e16-43f3-a872-2c0c60c7e7bf" name="billing-history-sub_Flow"/>
-				<ee:transform doc:name="Transform Message" doc:id="146a7dca-a6f5-4ab0-88a3-223bebc3bb3b" >
-					<ee:message >
-						<ee:set-payload ><![CDATA[%dw 2.0
-output application/java
----
-{
-}]]></ee:set-payload>
-					</ee:message>
-				</ee:transform>
+				<flow-ref doc:name="wireless-bill-history-sub-flow"
+					doc:id="44e47764-aaa6-4863-b519-8613afb05142"
+					name="wireless-bill-history-sub-flow" />
 			</route>
 			<route>
-				<set-payload value='#[(payload filter ((item, index) -&gt; item.product == "Wireline"))[0]]' doc:name="to Wireline" doc:id="0c85a98a-b9d2-418f-aae7-2c6f9c521648" />
-				<flow-ref doc:name="billing-history-sub_Flow" doc:id="49b95077-7344-41fa-882b-dda4426668bd" name="billing-history-sub_Flow"/>
-				<ee:transform doc:name="Transform Message" doc:id="3a247537-4395-46bb-b817-ca015fb4f638" >
-					<ee:message >
-						<ee:set-payload ><![CDATA[%dw 2.0
+				<flow-ref doc:name="wireline-bill-history-sub-flow"
+					doc:id="8e9c700a-a3f0-4f48-893d-0a72a8e03c6a"
+					name="wireline-bill-history-sub-flow" />
+			</route>
+			<route>
+				<flow-ref doc:name="ott-bill-history-sub-flow"
+					doc:id="01f611fa-69c0-4b2b-85bd-586c7ff624bd"
+					name="ott-bill-history-sub-flow" />
+			</route>
+
+		</scatter-gather>
+		<ee:transform doc:name="Transform Message"
+			doc:id="0b3957db-66d0-4b31-94c2-3f0aa7476044">
+			<ee:message>
+				<ee:set-payload><![CDATA[%dw 2.0
+output application/json skipNullOn="everywhere"
+---
+{
+		
+	"Wireless" : if(not isEmpty(payload[0].payload)) (payload[0].payload) else null,
+	"Wireline" : if(not isEmpty(payload[1].payload)) (payload[1].payload) else null,
+	"OTT" : if(not isEmpty(payload[2].payload)) (payload[2].payload) else null
+	
+}]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+	</flow>
+	<sub-flow name="wireless-bill-history-sub-flow"
+		doc:id="557b7243-f2fe-4bad-b08b-52bb15b3a492">
+		<set-variable
+			value='#[(payload filter ((item, index) -&gt; item.product == "Wireless"))[0]]'
+			doc:name="to Wireless" doc:id="65f668c6-a2bd-4f55-bbca-cf462789883a"
+			variableName="billHistoryRequest" />
+		<choice doc:name="Choice"
+			doc:id="4629bb38-c9a1-473d-9399-e1d35000746a">
+			<when expression="#[not isEmpty(vars.billHistoryRequest)]">
+				<flow-ref doc:name="billing-history-sub-flow"
+					doc:id="2098c5e2-4e16-43f3-a872-2c0c60c7e7bf"
+					name="billing-history-sub-flow" />
+				<ee:transform doc:name="Transform Message"
+					doc:id="146a7dca-a6f5-4ab0-88a3-223bebc3bb3b">
+					<ee:message>
+						<ee:set-payload><![CDATA[%dw 2.0
 output application/json
+type USDateType = Date { format: "MM/dd/yyyy" }
+type InternationalDateType = Date { format: "yyyy-MM-dd" }
+var requestedStartDate= vars.billHistoryRequest.startDate as InternationalDateType
+var requestedEndDate = vars.billHistoryRequest.endDate as InternationalDateType
 ---
-{
-}]]></ee:set-payload>
+(payload.content.billHistoryData filter ((item, index) -> requestedStartDate >= item.cycleStartDate as USDateType and requestedEndDate <= item.cycleEndDate as USDateType)
+orderBy ((item, index) -> item.cycleStartDate as USDateType))[-1 to 0]]]></ee:set-payload>
 					</ee:message>
 				</ee:transform>
-				<ee:transform doc:name="Transform Message" doc:id="a857ede3-7719-4175-a82b-16309cb6631c" >
-					<ee:message >
-						<ee:set-payload ><![CDATA[%dw 2.0
-output application/java
+			</when>
+			<otherwise>
+				<flow-ref doc:name="set-null-array-payload"
+					doc:id="4aaa71c3-5759-445f-bd23-d0619d3b2766"
+					name="set-null-array-payload" />
+			</otherwise>
+		</choice>
+	</sub-flow>
+	<sub-flow name="wireline-bill-history-sub-flow"
+		doc:id="5f3b91d2-0e62-45de-910f-491a5bb63b5d">
+		<set-variable
+			value='#[(payload filter ((item, index) -&gt; item.product == "Wireline"))[0]]'
+			doc:name="to billHistoryRequest"
+			doc:id="0c85a98a-b9d2-418f-aae7-2c6f9c521648"
+			variableName="billHistoryRequest" />
+		<choice doc:name="Choice"
+			doc:id="75055cef-25fa-42af-b17d-e647522305cf">
+			<when expression="#[not isEmpty(vars.billHistoryRequest)]">
+				<flow-ref doc:name="billing-history-sub-flow"
+					doc:id="0139ac48-aba0-473b-bb49-f4899d1ec599"
+					name="billing-history-sub-flow" />
+				<ee:transform doc:name="Transform Message"
+					doc:id="a857ede3-7719-4175-a82b-16309cb6631c">
+					<ee:message>
+						<ee:set-payload><![CDATA[%dw 2.0
+output application/json
+type USDateType = Date { format: "MM/dd/yyyy" }
+type InternationalDateType = Date { format: "yyyy-MM-dd" }
+var requestedStartDate= vars.billHistoryRequest.startDate as InternationalDateType
+var requestedEndDate = vars.billHistoryRequest.endDate as InternationalDateType
 ---
-{
-}]]></ee:set-payload>
+(payload.content.billHistoryData filter ((item, index) -> requestedStartDate >= item.cycleStartDate as USDateType and requestedEndDate <= item.cycleEndDate as USDateType)
+orderBy ((item, index) -> item.cycleStartDate as USDateType))[-1 to 0]]]></ee:set-payload>
 					</ee:message>
 				</ee:transform>
-			</route>
-			<route>
-				<set-payload value='#[(payload filter ((item, index) -&gt; item.product == "OTT"))[0]]' doc:name="to OTT" doc:id="3630a148-9756-4f73-8700-f501c6ff0226" />
-				<http:request method="GET" doc:name="Payment System API getAccountHistory" doc:id="7714bd82-3dd9-44ce-b19c-8cc082c20299" config-ref="HTTPS_Payment_SystemAPI_Request_config" path="${secure::paymentSystemAPI.http.accountHistoryPath}" >
-					<http:query-params ><![CDATA[#[output application/java
+			</when>
+			<otherwise>
+				<flow-ref doc:name="set-null-array-payload"
+					doc:id="8ca2ae1c-9730-461a-84c2-4eddcbbef602"
+					name="set-null-array-payload" />
+			</otherwise>
+		</choice>
+	</sub-flow>
+	<sub-flow name="ott-bill-history-sub-flow"
+		doc:id="c97ba4ca-b488-427a-9c11-6c080aedec4b">
+		<set-variable
+			value='#[(payload filter ((item, index) -&gt; item.product == "OTT"))[0]]'
+			doc:name="to OTT" doc:id="1766c969-218e-43ad-b5f4-fe20d1ce7582"
+			variableName="billHistoryRequest" />
+		<choice doc:name="Choice"
+			doc:id="50bed855-63e8-498d-bdd9-e5f6f2878339">
+			<when expression="#[not isEmpty(vars.billHistoryRequest)]">
+				<http:request method="GET"
+					doc:name="Payment System API getAccountHistory"
+					doc:id="487e6d4c-4426-4d75-ab30-ee4f43dbbc3d"
+					config-ref="HTTPS_Payment_SystemAPI_Request_config"
+					path="${secure::paymentSystemAPI.http.accountHistoryPath}">
+					<http:query-params><![CDATA[#[output application/java
 ---
 {
 	"endDate" : vars.endDate,
 	"startDate" : vars.startDate
 }]]]></http:query-params>
-				</http:request>		
-	
-				
-			</route>
-		</scatter-gather>
-		<ee:transform doc:name="Transform Message"
-			doc:id="9f8462c0-9681-46d7-b7b3-05ca4efedc4e">
-			<ee:message>
-				<ee:set-payload><![CDATA[%dw 2.0
-output application/json
+				</http:request>
+			</when>
+			<otherwise>
+				<flow-ref doc:name="set-null-array-payload"
+					doc:id="34a1bc45-8a4a-4998-b309-c5c65ead6d3b"
+					name="set-null-array-payload" />
+			</otherwise>
+		</choice>
+	</sub-flow>
+
+	<sub-flow name="billing-history-sub-flow"
+		doc:id="6f2de0e6-ad4c-41b4-aeaa-610cc13549f8">
+		<set-variable value="#[vars.billHistoryRequest.ban]"
+			doc:name="ban" doc:id="b7e122cf-95f0-4915-8111-2ec06e0c1caa"
+			variableName="ban" />
+		<set-variable
+			value="#[if(vars.billHistoryRequest.product == 'Wireline') 'ENBLR'
+else 'TLG']"
+			doc:name="billerId" doc:id="35a64033-dde7-4824-92cc-c2c68d19d24b"
+			variableName="billerId" />
+		<http:request method="GET" doc:name="Billing History"
+			doc:id="0d387a4c-9d2f-408a-b3c0-721271223768"
+			config-ref="HTTPS_Billing_SystemAPI_Request_config"
+			path="${secure::billingSystemAPI.http.billCycleHistoryPath}">
+			<http:headers><![CDATA[#[output application/java
 ---
 {
-	"Wireless" : payload[0].payload,
-	"Wireline" : payload[1].payload,
-	"OTT" : payload[2].payload
-}]]></ee:set-payload>
-			</ee:message>
-		</ee:transform>
-	</flow>
-	<sub-flow name="billing-history-sub_Flow" doc:id="6f2de0e6-ad4c-41b4-aeaa-610cc13549f8" >
-		<http:request method="GET" doc:name="Billing History" doc:id="0d387a4c-9d2f-408a-b3c0-721271223768" config-ref="HTTPS_Billing_SystemAPI_Request_config" path="${secure::billingSystemAPI.http.billDetailsPath}">
+	"client_secret" : "${secure::billingSystemAPI.http.clientSecret}",
+	"client_id" : "${secure::billingSystemAPI.http.clientId}"
+}]]]></http:headers>
 			<http:uri-params><![CDATA[#[output application/java
 ---
 {
@@ -84,5 +176,8 @@ output application/json
 	"billerId" : vars.billerId
 }]]]></http:uri-params>
 		</http:request>
+	</sub-flow>
+	<sub-flow name="set-null-array-payload" doc:id="447ca3dd-9ea3-41bc-b03d-26e749bdd459" >
+		<set-payload value="#[[]]" doc:name="Set Null Array Payload" doc:id="ebb3d259-0dcf-431f-b767-1983c3fe5302" />
 	</sub-flow>
 </mule>

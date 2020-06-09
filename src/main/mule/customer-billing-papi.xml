@@ -23,6 +23,12 @@
             </ee:variables>
         </ee:transform>
 		<http:request method="GET" doc:name="Billing Details" doc:id="450ed45e-ba51-475f-836d-37e9de2087ec" config-ref="HTTPS_Billing_SystemAPI_Request_config" path="${secure::billingSystemAPI.http.billDetailsPath}">
+			<http:headers><![CDATA[#[output application/java
+---
+{
+	"client_secret" : "${secure::billingSystemAPI.http.clientSecret}",
+	"client_id" : "${secure::billingSystemAPI.http.clientId}"
+}]]]></http:headers>
 			<http:uri-params ><![CDATA[#[output application/java
 ---
 {
@@ -38,6 +44,12 @@
             </ee:variables>
         </ee:transform>
 		<http:request method="GET" doc:name="Billing PDF" doc:id="6477fa51-4862-4cd0-8bb9-2c2c9aa9e50e" config-ref="HTTPS_Billing_SystemAPI_Request_config" path="${secure::billingSystemAPI.http.billPdfPath}">
+			<http:headers><![CDATA[#[output application/java
+---
+{
+	"client_secret" : "${secure::billingSystemAPI.http.clientSecret}",
+	"client_id" : "${secure::billingSystemAPI.http.clientId}"
+}]]]></http:headers>
 			<http:uri-params ><![CDATA[#[output application/java
 ---
 {
@@ -53,6 +65,12 @@
             </ee:variables>
         </ee:transform>
 		<http:request method="GET" doc:name="Payment System API nextSubscriptionCharges" doc:id="c0ce3afc-3292-45ec-b0e0-1bec03cefb7d" config-ref="HTTPS_Payment_SystemAPI_Request_config" path="${secure::paymentSystemAPI.http.nextSubscriptionChargesPath}">
+			<http:headers><![CDATA[#[output application/java
+---
+{
+	"client_secret" : "${secure::paymentSystemAPI.http.clientSecret}",
+	"client_id" : "${secure::paymentSystemAPI.http.clientId}"
+}]]]></http:headers>
 			<http:uri-params ><![CDATA[#[output application/java
 ---
 {

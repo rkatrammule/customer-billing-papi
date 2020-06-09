@@ -33,7 +33,7 @@ http://www.mulesoft.org/schema/mule/kafka http://www.mulesoft.org/schema/mule/ka
 		key="${mule.key}" />
 	<global-property doc:name="Global Property"
 		doc:id="6c83b6fd-5fde-4bdc-9802-bc162845d4d9" name="mule.env"
-		value="dev" />
+		value="local" />
 	<global-property doc:name="Global Property"
 		doc:id="b13e68df-792d-4dae-8b6b-4715a98c2656" name="mule.key"
 		value="mKxTq&amp;W]\@+s(/3&amp;" />
@@ -58,8 +58,7 @@ http://www.mulesoft.org/schema/mule/kafka http://www.mulesoft.org/schema/mule/ka
 		basePath="${secure::billingSystemAPI.http.basePath}">
 		<http:request-connection
 			host="${secure::billingSystemAPI.http.host}"
-			port="${secure::billingSystemAPI.http.port}" protocol="HTTPS"
-			maxConnections="${secure::billingSystemAPI.http.maxConnections}"
+			port="${secure::billingSystemAPI.http.port}" maxConnections="${secure::billingSystemAPI.http.maxConnections}"
 			connectionIdleTimeout="${secure::billingSystemAPI.http.connTimeout}">
 			<reconnection>
 				<reconnect
@@ -90,4 +89,5 @@ http://www.mulesoft.org/schema/mule/kafka http://www.mulesoft.org/schema/mule/ka
 		apiId="${secure::api.id}" doc:name="API Autodiscovery"
 		doc:id="fec9fafd-8306-4a9a-be21-b26714ab6efa"
 		flowRef="customer-billing-papi-main" ignoreBasePath="true" />
+		<configuration doc:name="Error_Handler_Configuration" doc:id="7965b410-cc06-4bc5-9c17-bfa5f0310358" defaultErrorHandler-ref="globalError_Handler" />
 </mule>
