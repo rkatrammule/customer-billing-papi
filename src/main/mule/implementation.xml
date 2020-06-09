@@ -72,8 +72,11 @@ type InternationalDateType = Date { format: "yyyy-MM-dd" }
 var requestedStartDate= vars.billHistoryRequest.startDate as InternationalDateType
 var requestedEndDate = vars.billHistoryRequest.endDate as InternationalDateType
 ---
-(payload.content.billHistoryData filter ((item, index) -> requestedStartDate >= item.cycleStartDate as USDateType and requestedEndDate <= item.cycleEndDate as USDateType)
-orderBy ((item, index) -> item.cycleStartDate as USDateType))[-1 to 0]]]></ee:set-payload>
+if(not isEmpty(payload.content.billHistoryData))
+	(payload.content.billHistoryData filter ((item, index) -> requestedStartDate >= item.cycleStartDate as USDateType and requestedEndDate <= item.cycleEndDate as USDateType)
+	orderBy ((item, index) -> item.cycleStartDate as USDateType))[-1 to 0]
+else
+	payload]]></ee:set-payload>
 					</ee:message>
 				</ee:transform>
 			</when>
@@ -107,8 +110,11 @@ type InternationalDateType = Date { format: "yyyy-MM-dd" }
 var requestedStartDate= vars.billHistoryRequest.startDate as InternationalDateType
 var requestedEndDate = vars.billHistoryRequest.endDate as InternationalDateType
 ---
-(payload.content.billHistoryData filter ((item, index) -> requestedStartDate >= item.cycleStartDate as USDateType and requestedEndDate <= item.cycleEndDate as USDateType)
-orderBy ((item, index) -> item.cycleStartDate as USDateType))[-1 to 0]]]></ee:set-payload>
+if(not isEmpty(payload.content.billHistoryData))
+	(payload.content.billHistoryData filter ((item, index) -> requestedStartDate >= item.cycleStartDate as USDateType and requestedEndDate <= item.cycleEndDate as USDateType)
+	orderBy ((item, index) -> item.cycleStartDate as USDateType))[-1 to 0]
+else
+	payload]]></ee:set-payload>
 					</ee:message>
 				</ee:transform>
 			</when>
