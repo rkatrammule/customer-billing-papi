@@ -128,17 +128,17 @@ orderBy ((item, index) -> item.cycleStartDate as USDateType))[-1 to 0]]]></ee:se
 		<choice doc:name="Choice"
 			doc:id="50bed855-63e8-498d-bdd9-e5f6f2878339">
 			<when expression="#[not isEmpty(vars.billHistoryRequest)]">
-				<http:request method="GET"
+				<http:request method="POST"
 					doc:name="Payment System API getAccountHistory"
 					doc:id="487e6d4c-4426-4d75-ab30-ee4f43dbbc3d"
 					config-ref="HTTPS_Payment_SystemAPI_Request_config"
 					path="${secure::paymentSystemAPI.http.accountHistoryPath}">
-					<http:query-params><![CDATA[#[output application/java
+					<http:body><![CDATA[#[output application/json
 ---
 {
 	"endDate" : vars.endDate,
 	"startDate" : vars.startDate
-}]]]></http:query-params>
+}]]]></http:body>
 				</http:request>
 			</when>
 			<otherwise>
@@ -177,7 +177,10 @@ else 'TLG']"
 }]]]></http:uri-params>
 		</http:request>
 	</sub-flow>
-	<sub-flow name="set-null-array-payload" doc:id="447ca3dd-9ea3-41bc-b03d-26e749bdd459" >
-		<set-payload value="#[[]]" doc:name="Set Null Array Payload" doc:id="ebb3d259-0dcf-431f-b767-1983c3fe5302" />
+	<sub-flow name="set-null-array-payload"
+		doc:id="447ca3dd-9ea3-41bc-b03d-26e749bdd459">
+		<set-payload value="#[[]]"
+			doc:name="Set Null Array Payload"
+			doc:id="ebb3d259-0dcf-431f-b767-1983c3fe5302" />
 	</sub-flow>
 </mule>
