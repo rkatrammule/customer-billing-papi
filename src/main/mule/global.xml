@@ -75,8 +75,7 @@ http://www.mulesoft.org/schema/mule/kafka http://www.mulesoft.org/schema/mule/ka
 		basePath="${secure::paymentSystemAPI.http.basePath}">
 		<http:request-connection
 			host="${secure::paymentSystemAPI.http.host}"
-			port="${secure::paymentSystemAPI.http.port}" protocol="HTTPS"
-			maxConnections="${secure::paymentSystemAPI.http.maxConnections}"
+			port="${secure::paymentSystemAPI.http.port}" maxConnections="${secure::paymentSystemAPI.http.maxConnections}"
 			connectionIdleTimeout="${secure::paymentSystemAPI.http.connTimeout}">
 			<reconnection>
 				<reconnect

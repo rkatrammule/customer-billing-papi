@@ -134,6 +134,9 @@ else
 		<choice doc:name="Choice"
 			doc:id="50bed855-63e8-498d-bdd9-e5f6f2878339">
 			<when expression="#[not isEmpty(vars.billHistoryRequest)]">
+				<set-variable value="#[vars.billHistoryRequest.ban]"
+					doc:name="ban" doc:id="4649ce80-350a-47b0-9659-9010dd236eaf"
+					variableName="ban" />
 				<http:request method="POST"
 					doc:name="Payment System API getAccountHistory"
 					doc:id="487e6d4c-4426-4d75-ab30-ee4f43dbbc3d"
@@ -145,7 +148,19 @@ else
 	"endDate" : vars.endDate,
 	"startDate" : vars.startDate
 }]]]></http:body>
-				</http:request>
+					<http:headers><![CDATA[#[output application/java
+---
+{
+	"client_secret" : "${secure::billingSystemAPI.http.clientSecret}",
+	"client_id" : "${secure::billingSystemAPI.http.clientId}"
+}]]]></http:headers>
+					<http:uri-params><![CDATA[#[output application/java
+---
+{
+	"ban" : vars.ban
+}]]]></http:uri-params>
+				
+</http:request>
 			</when>
 			<otherwise>
 				<flow-ref doc:name="set-null-array-payload"

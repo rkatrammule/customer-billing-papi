@@ -27,7 +27,7 @@ billingSystemAPI:
 paymentSystemAPI:
   http:     
     host : "localhost"
-    port : "8083"
+    port : "8084"
     basePath : "/api"    
     reconAttempts: "3"
     reconFrequency: "20000"
