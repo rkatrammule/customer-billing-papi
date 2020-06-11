@@ -13,69 +13,15 @@
         <apikit:router config-ref="customer-billing-papi-config" />
     </flow>
     <flow name="post:\billing\accounts\summary:application\json:customer-billing-papi-config">
-        <flow-ref doc:name="retrieve-bill-summary-details-flow" doc:id="025fc319-94dc-438d-bae1-2b75909dc1ee" name="retrieve-bill-summary-details-flow" />
+        <flow-ref doc:name="retrieve-bill-summary-details-sub-flow" doc:id="025fc319-94dc-438d-bae1-2b75909dc1ee" name="retrieve-bill-summary-details-sub-flow" />
     </flow>
     <flow name="get:\billing\(productId)\statements\(statementId)\details:customer-billing-papi-config">
-        <ee:transform>
-            <ee:variables>
-                <ee:set-variable variableName="productId">attributes.uriParams.'productId'</ee:set-variable>
-                <ee:set-variable variableName="statementId">attributes.uriParams.'statementId'</ee:set-variable>
-            </ee:variables>
-        </ee:transform>
-		<http:request method="GET" doc:name="Billing Details" doc:id="450ed45e-ba51-475f-836d-37e9de2087ec" config-ref="HTTPS_Billing_SystemAPI_Request_config" path="${secure::billingSystemAPI.http.billDetailsPath}">
-			<http:headers><![CDATA[#[output application/java
----
-{
-	"client_secret" : "${secure::billingSystemAPI.http.clientSecret}",
-	"client_id" : "${secure::billingSystemAPI.http.clientId}"
-}]]]></http:headers>
-			<http:uri-params ><![CDATA[#[output application/java
----
-{
-	"statementId" : vars.statementId
-}]]]></http:uri-params>
-		</http:request>
+		<flow-ref doc:name="get-product-bill-details-sub-flow" doc:id="a3b32496-a7d5-4c08-a2fd-da3161239732" name="get-product-bill-details-sub-flow" />
     </flow>
     <flow name="get:\billing\(productId)\statements\(statementId)\pdf:customer-billing-papi-config">
-        <ee:transform>
-            <ee:variables>
-                <ee:set-variable variableName="productId">attributes.uriParams.'productId'</ee:set-variable>
-                <ee:set-variable variableName="statementId">attributes.uriParams.'statementId'</ee:set-variable>
-            </ee:variables>
-        </ee:transform>
-		<http:request method="GET" doc:name="Billing PDF" doc:id="6477fa51-4862-4cd0-8bb9-2c2c9aa9e50e" config-ref="HTTPS_Billing_SystemAPI_Request_config" path="${secure::billingSystemAPI.http.billPdfPath}">
-			<http:headers><![CDATA[#[output application/java
----
-{
-	"client_secret" : "${secure::billingSystemAPI.http.clientSecret}",
-	"client_id" : "${secure::billingSystemAPI.http.clientId}"
-}]]]></http:headers>
-			<http:uri-params ><![CDATA[#[output application/java
----
-{
-	"statementId" : vars.statementId
-}]]]></http:uri-params>
-		</http:request>
+		<flow-ref doc:name="get-product-bill-pdf-sub-flow" doc:id="4fa759e4-3751-4918-b793-2f293858b5b6" name="get-product-bill-pdf-sub-flow" />
     </flow>
     <flow name="get:\billing\(productId)\currentBill\(ban):customer-billing-papi-config">
-        <ee:transform>
-            <ee:variables>
-                <ee:set-variable variableName="productId">attributes.uriParams.'productId'</ee:set-variable>
-                <ee:set-variable variableName="ban">attributes.uriParams.'ban'</ee:set-variable>
-            </ee:variables>
-        </ee:transform>
-		<http:request method="GET" doc:name="Payment System API nextSubscriptionCharges" doc:id="c0ce3afc-3292-45ec-b0e0-1bec03cefb7d" config-ref="HTTPS_Payment_SystemAPI_Request_config" path="${secure::paymentSystemAPI.http.nextSubscriptionChargesPath}">
-			<http:headers><![CDATA[#[output application/java
----
-{
-	"client_secret" : "${secure::paymentSystemAPI.http.clientSecret}",
-	"client_id" : "${secure::paymentSystemAPI.http.clientId}"
-}]]]></http:headers>
-			<http:uri-params ><![CDATA[#[output application/java
----
-{
-	"ban" : vars.ban
-}]]]></http:uri-params>
-		</http:request>
+		<flow-ref doc:name="get-product-current-bill-sub-flow" doc:id="f1ac80bd-060f-496b-9a21-98802ed8110f" name="get-product-current-bill-sub-flow" />
     </flow>
 </mule>
