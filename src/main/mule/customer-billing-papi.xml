@@ -10,7 +10,9 @@
                 <http:headers><![CDATA[#[vars.outboundHeaders default {}]]]></http:headers>
             </http:error-response>
         </http:listener>
-        <apikit:router config-ref="customer-billing-papi-config" />
+        <set-variable value="#[attributes.headers.uuid default uuid()]" doc:name="uuid" doc:id="5ef2c168-ddeb-474d-8e1c-659605d09837" variableName="uuid"/>
+		<set-variable value="#[attributes.headers.'idp-trace-id']" doc:name="idpTraceId" doc:id="b8554822-7fb9-4d82-81f2-beda519a33d3" variableName="idpTraceId"/>
+		<apikit:router config-ref="customer-billing-papi-config" />
     </flow>
     <flow name="post:\billing\accounts\summary:application\json:customer-billing-papi-config">
         <flow-ref doc:name="retrieve-bill-summary-details-sub-flow" doc:id="025fc319-94dc-438d-bae1-2b75909dc1ee" name="retrieve-bill-summary-details-sub-flow" />

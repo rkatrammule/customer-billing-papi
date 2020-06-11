@@ -40,7 +40,8 @@ http://www.mulesoft.org/schema/mule/att-mule-applicationlogger http://www.muleso
 ---
 {
 	"client_secret" : "${secure::paymentSystemAPI.http.clientSecret}",
-	"client_id" : "${secure::paymentSystemAPI.http.clientId}"
+	"client_id" : "${secure::paymentSystemAPI.http.clientId}",
+	"uuid" : vars.uuid
 }]]]></http:headers>
 			<http:uri-params><![CDATA[#[output application/java
 ---
@@ -79,7 +80,8 @@ http://www.mulesoft.org/schema/mule/att-mule-applicationlogger http://www.muleso
 ---
 {
 	"client_secret" : "${secure::billingSystemAPI.http.clientSecret}",
-	"client_id" : "${secure::billingSystemAPI.http.clientId}"
+	"client_id" : "${secure::billingSystemAPI.http.clientId}",
+	"uuid" : vars.uuid
 }]]]></http:headers>
 			<http:uri-params><![CDATA[#[output application/java
 ---
@@ -118,7 +120,8 @@ http://www.mulesoft.org/schema/mule/att-mule-applicationlogger http://www.muleso
 ---
 {
 	"client_secret" : "${secure::billingSystemAPI.http.clientSecret}",
-	"client_id" : "${secure::billingSystemAPI.http.clientId}"
+	"client_id" : "${secure::billingSystemAPI.http.clientId}",
+	"uuid" : vars.uuid
 }]]]></http:headers>
 			<http:uri-params><![CDATA[#[output application/java
 ---
@@ -196,7 +199,8 @@ else 'TLG']" doc:name="billerId" doc:id="e410f9c6-3c41-4707-b934-ca1f8d36067e" v
 ---
 {
 	"client_secret" : "${secure::billingSystemAPI.http.clientSecret}",
-	"client_id" : "${secure::billingSystemAPI.http.clientId}"
+	"client_id" : "${secure::billingSystemAPI.http.clientId}",
+	"uuid" : vars.uuid
 }]]]></http:headers>
 			<http:uri-params><![CDATA[#[output application/java
 ---
@@ -256,8 +260,9 @@ else
 					<http:headers><![CDATA[#[output application/java
 ---
 {
-	"client_secret" : "${secure::billingSystemAPI.http.clientSecret}",
-	"client_id" : "${secure::billingSystemAPI.http.clientId}"
+	"client_secret" : "${secure::paymentSystemAPI.http.clientSecret}",
+	"client_id" : "${secure::paymentSystemAPI.http.clientId}",
+	"uuid" : vars.uuid
 }]]]></http:headers>
 					<http:uri-params><![CDATA[#[output application/java
 ---
