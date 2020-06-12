@@ -194,7 +194,8 @@ output application/json skipNullOn="everywhere"
 				<set-variable value="#[vars.billHistoryRequest.ban]" doc:name="ban" doc:id="258b2144-f0ce-4822-8d4b-513f2f6074b0" variableName="ban" />
 				<set-variable value="#[if(vars.billHistoryRequest.product == 'Wireline') 'ENBLR'
 else 'TLG']" doc:name="billerId" doc:id="e410f9c6-3c41-4707-b934-ca1f8d36067e" variableName="billerId" />
-				<http:request method="GET" doc:name="billing history" doc:id="03b2c23c-905e-40eb-be21-42d822c7be6d" config-ref="HTTPS_Billing_SystemAPI_Request_config" path="${secure::billingSystemAPI.http.billCycleHistoryPath}">
+				<try doc:name="Try" doc:id="29317215-2a44-4f02-8c21-8d500e5ac3b9" >
+					<http:request method="GET" doc:name="billing history" doc:id="03b2c23c-905e-40eb-be21-42d822c7be6d" config-ref="HTTPS_Billing_SystemAPI_Request_config" path="${secure::billingSystemAPI.http.billCycleHistoryPath}">
 			<http:headers><![CDATA[#[output application/java
 ---
 {
@@ -209,6 +210,21 @@ else 'TLG']" doc:name="billerId" doc:id="e410f9c6-3c41-4707-b934-ca1f8d36067e" v
 	"billerId" : vars.billerId
 }]]]></http:uri-params>
 		</http:request>
+					<error-handler >
+						<on-error-continue enableNotifications="true" logException="true" doc:name="On Error Continue" doc:id="461b0608-6a54-498d-8242-a9cc7a921723" >
+							<ee:transform doc:name="set error" doc:id="9cbf754f-9fce-41a5-9ed5-e5dfd594fcd9" >
+								<ee:message >
+									<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+{
+	error : error.errorMessage
+}]]></ee:set-payload>
+								</ee:message>
+							</ee:transform>
+						</on-error-continue>
+					</error-handler>
+				</try>
 				<ee:transform doc:name="filter records" doc:id="8be35167-a60e-4f12-81cf-c40dfcbc1ab9">
 			<ee:message>
 				<ee:set-payload><![CDATA[%dw 2.0
@@ -232,7 +248,8 @@ else
 	payload]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
-			</when>
+			
+</when>
 			<otherwise>
 				<flow-ref doc:name="set-null-array-payload" doc:id="34d9e2f8-5550-4bac-a9c4-61f94e663062" name="set-null-array-payload" />
 			</otherwise>
@@ -246,11 +263,8 @@ else
 				<set-variable value="#[vars.billHistoryRequest.ban]"
 					doc:name="ban" doc:id="4649ce80-350a-47b0-9659-9010dd236eaf"
 					variableName="ban" />
-				<http:request method="POST"
-					doc:name="payment system api getAccountHistory"
-					doc:id="487e6d4c-4426-4d75-ab30-ee4f43dbbc3d"
-					config-ref="HTTPS_Payment_SystemAPI_Request_config"
-					path="${secure::paymentSystemAPI.http.accountHistoryPath}">
+				<try doc:name="Try" doc:id="26802806-e898-4fac-8007-e85f0028190f" >
+					<http:request method="POST" doc:name="payment system api getAccountHistory" doc:id="487e6d4c-4426-4d75-ab30-ee4f43dbbc3d" config-ref="HTTPS_Payment_SystemAPI_Request_config" path="${secure::paymentSystemAPI.http.accountHistoryPath}">
 					<http:body><![CDATA[#[output application/json
 ---
 {
@@ -270,7 +284,23 @@ else
 	"ban" : vars.ban
 }]]]></http:uri-params>
 				</http:request>
-			</when>
+					<error-handler >
+						<on-error-continue enableNotifications="true" logException="true" doc:name="On Error Continue" doc:id="be49d7c6-3fa9-4e76-b722-e30bd8a8f5b9" >
+							<ee:transform doc:name="set error" doc:id="b9e1b499-b164-472e-bdfb-c96e28f8aa1e" >
+								<ee:message >
+									<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+{
+	error : error.errorMessage
+}]]></ee:set-payload>
+								</ee:message>
+							</ee:transform>
+						</on-error-continue>
+					</error-handler>
+				</try>
+			
+</when>
 			<otherwise>
 				<flow-ref doc:name="set-null-array-payload"
 					doc:id="34a1bc45-8a4a-4998-b309-c5c65ead6d3b"
